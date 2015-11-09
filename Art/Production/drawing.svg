@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1052.3622 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="drawing.svg"
+   inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\Card.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="375.59899"
+     inkscape:cy="450.94543"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1033"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox-edge-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4136"
+       empspacing="16"
+       spacingx="4.0000001"
+       spacingy="4" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <rect
+       style="opacity:1;fill:#2c89a0;fill-opacity:1;stroke:#164450;stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4138"
+       width="127"
+       height="191.00002"
+       x="128.5"
+       y="540.86218"
+       ry="4"
+       rx="4"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardFront.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="opacity:1;fill:#afdde9;fill-opacity:1;stroke:#164450;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4148"
+       width="119.00001"
+       height="15.000024"
+       x="132.5"
+       y="544.86218"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardFront.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardFront.png"
+       y="564.86218"
+       x="132.5"
+       height="39.000023"
+       width="119.00001"
+       id="rect4154"
+       style="opacity:1;fill:#afdde9;fill-opacity:1;stroke:#164450;stroke-width:0.99999994;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#afdde9;fill-opacity:1;stroke:#164450;stroke-width:0.99999982;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4156"
+       width="119.00001"
+       height="98.999962"
+       x="132.5"
+       y="608.86224"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardFront.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardFront.png"
+       y="712.86218"
+       x="132.5"
+       height="14.999988"
+       width="119.00001"
+       id="rect4158"
+       style="opacity:1;fill:#afdde9;fill-opacity:1;stroke:#164450;stroke-width:0.99999994;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardFront.png"
+       rx="2.8661416"
+       ry="2.6596861"
+       y="540.86218"
+       x="320.5"
+       height="127.00002"
+       width="91"
+       id="rect4160"
+       style="opacity:1;fill:#2ca05a;fill-opacity:1;stroke:#164450;stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#afe9af;fill-opacity:1;stroke:#164450;stroke-width:0.99999994;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4162"
+       width="83"
+       height="15.000024"
+       x="324.5"
+       y="544.86218"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardFront.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="opacity:1;fill:#afe9af;fill-opacity:1;stroke:#164450;stroke-width:0.99999994;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4164"
+       width="83.000008"
+       height="99.000031"
+       x="324.5"
+       y="564.86218"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardFront.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardBack.png"
+       rx="4"
+       ry="4"
+       y="284.86221"
+       x="128.5"
+       height="191.00002"
+       width="127"
+       id="rect4168"
+       style="opacity:1;fill:#2c89a0;fill-opacity:1;stroke:#164450;stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#2ca05a;fill-opacity:1;stroke:#164450;stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4170"
+       width="91"
+       height="127.00002"
+       x="320.5"
+       y="284.86221"
+       ry="2.6596861"
+       rx="2.8661416"
+       inkscape:export-filename="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardBack.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

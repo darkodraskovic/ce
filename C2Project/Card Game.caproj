@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Card Game</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1o569i80gw8yq</unique-id>
+    <saved-with-version>21600</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1024</width>
+        <height>768</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Card">
+            <object-folder name="Generic">
+                <object-type name="GenericBody" sid="7795414317689359">
+                    <plugin id="Text" />
+                    <container>
+                        <type>GenericCard</type>
+                        <type>GenericBody</type>
+                        <type>GenericFooter</type>
+                        <type>GenericHeader</type>
+                        <type>GenericTitle</type>
+                        <type>GenericPins</type>
+                    </container>
+                </object-type>
+                <object-type global="1" name="GenericData" sid="7172834122007283">
+                    <plugin id="Dictionary" />
+                </object-type>
+                <object-type name="GenericFooter" sid="9174879420668665">
+                    <plugin id="Text" />
+                    <container>
+                        <type>GenericCard</type>
+                        <type>GenericBody</type>
+                        <type>GenericFooter</type>
+                        <type>GenericHeader</type>
+                        <type>GenericTitle</type>
+                        <type>GenericPins</type>
+                    </container>
+                </object-type>
+                <object-type name="GenericHeader" sid="7698881331494281">
+                    <plugin id="Text" />
+                    <container>
+                        <type>GenericCard</type>
+                        <type>GenericBody</type>
+                        <type>GenericFooter</type>
+                        <type>GenericHeader</type>
+                        <type>GenericTitle</type>
+                        <type>GenericPins</type>
+                    </container>
+                </object-type>
+                <object-type name="GenericTitle" sid="9781371747812887">
+                    <plugin id="Text" />
+                    <container>
+                        <type>GenericCard</type>
+                        <type>GenericBody</type>
+                        <type>GenericFooter</type>
+                        <type>GenericHeader</type>
+                        <type>GenericTitle</type>
+                        <type>GenericPins</type>
+                    </container>
+                </object-type>
+                <object-type name="GenericCard" sid="1437872260365753">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>GenericCard</type>
+                        <type>GenericBody</type>
+                        <type>GenericFooter</type>
+                        <type>GenericHeader</type>
+                        <type>GenericTitle</type>
+                        <type>GenericPins</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4033350310190619" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardFront.png">
+                                <image-point name="Title" x="0.0546875" y="0.0260417" />
+                                <image-point name="Header" x="0.0546875" y="0.130208" />
+                                <image-point name="Body" x="0.0546875" y="0.359375" />
+                                <image-point name="Footer" x="0.0546875" y="0.901042" />
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardBack.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type global="1" name="GenericPins" sid="4284084032169036">
+                    <plugin id="Arr" />
+                    <container>
+                        <type>GenericCard</type>
+                        <type>GenericBody</type>
+                        <type>GenericFooter</type>
+                        <type>GenericHeader</type>
+                        <type>GenericTitle</type>
+                        <type>GenericPins</type>
+                    </container>
+                </object-type>
+            </object-folder>
+            <object-folder name="Mini">
+                <object-type name="MiniCard" sid="6013150731801859">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>MiniCard</type>
+                        <type>MiniTitle</type>
+                        <type>MiniBody</type>
+                        <type>MiniPins</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3702139153127765" speed="0">
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardFront.png">
+                                <image-point name="Title" x="0.076087" y="0.0390625" />
+                                <image-point name="Body" x="0.076087" y="0.195313" />
+                                <collision-poly>
+                                    <point x="1" y="0" />
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardBack.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type global="1" name="MiniData" sid="7028820870145656">
+                    <plugin id="Dictionary" />
+                </object-type>
+                <object-type name="MiniTitle" sid="7790531375083102">
+                    <plugin id="Text" />
+                    <container>
+                        <type>MiniCard</type>
+                        <type>MiniTitle</type>
+                        <type>MiniBody</type>
+                        <type>MiniPins</type>
+                    </container>
+                </object-type>
+                <object-type name="MiniBody" sid="253629421349716">
+                    <plugin id="Text" />
+                    <container>
+                        <type>MiniCard</type>
+                        <type>MiniTitle</type>
+                        <type>MiniBody</type>
+                        <type>MiniPins</type>
+                    </container>
+                </object-type>
+                <object-type global="1" name="MiniPins" sid="2636333296179587">
+                    <plugin id="Arr" />
+                    <container>
+                        <type>MiniCard</type>
+                        <type>MiniTitle</type>
+                        <type>MiniBody</type>
+                        <type>MiniPins</type>
+                    </container>
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="Deck">
+            <object-type global="1" name="GenericDeck" sid="1155166700531714">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="MiniDeck" sid="9452738664010549">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
+        <object-type name="Mouse" sid="9649518080542992">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Function" sid="4541220785232194">
+            <plugin id="Function" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="CardTexts" plugin-id="Text" sid="752120663348031">
+            <members>
+                <member>GenericBody</member>
+                <member>GenericFooter</member>
+                <member>GenericHeader</member>
+                <member>GenericTitle</member>
+                <member>MiniBody</member>
+                <member>MiniTitle</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="750574511715453">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Cards" plugin-id="Sprite" sid="7491079590010029">
+            <members>
+                <member>GenericCard</member>
+                <member>MiniCard</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Type" sid="4906132138738571" type="string" />
+                <instance-variable name="PinsUID" sid="3465910369710021" type="number" />
+                <instance-variable name="DeckUID" sid="7389795864446226" type="number" />
+                <instance-variable name="FacingUp" sid="522321555947145" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="8082562073645073">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Decks" plugin-id="Arr" sid="1091432558613702">
+            <members>
+                <member>GenericDeck</member>
+                <member>MiniDeck</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Type" sid="118632860871426" type="string" />
+            </instance-variables>
+        </family>
+        <family name="Pins" plugin-id="Arr" sid="1900585792951669">
+            <members>
+                <member>GenericPins</member>
+                <member>MiniPins</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>CardData.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="1" />
+        <global-instance type="Function" uid="2" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

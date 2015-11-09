@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>CardData</include>
+        <event-group description="" sid="2311737630359872" title="Deck">
+            <sub-events>
+                <comment>Arguments: #0 Card type, #1 Deck type</comment>
+                <event-block sid="2385705269371928">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8315265373894341" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="CardUID" sid="8443070087653877" static="0" type="number">0</variable>
+                        <variable constant="0" name="DeckUID" sid="7263117288492739" static="0" type="number">0</variable>
+                        <variable constant="0" name="PinsUID" sid="7027575450070709" static="0" type="number">0</variable>
+                        <event-block sid="7239210187233793">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="882236454558439" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Generic&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="1256790916342536" type="System">
+                                    <param id="0" name="Object to create">GenericCard</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5755988305122096" type="System">
+                                    <param id="0" name="Variable">CardUID</param>
+                                    <param id="1" name="Value">GenericCard.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1448463448711571" type="GenericCard">
+                                    <param id="0" name="Instance variable">DeckUID</param>
+                                    <param id="1" name="Value">GenericDeck.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="318478608420555" type="GenericCard">
+                                    <param id="0" name="Instance variable">PinsUID</param>
+                                    <param id="1" name="Value">GenericPins.UID</param>
+                                </action>
+                                <action id="1" name="Set size" sid="7127898168209138" type="GenericPins">
+                                    <param id="0" name="Width">0</param>
+                                    <param id="1" name="Height">1</param>
+                                    <param id="2" name="Depth">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="456279317942658" type="GenericTitle">
+                                    <param id="0" name="Object">GenericCard</param>
+                                    <param id="1" name="Image point (optional)">&quot;Title&quot;</param>
+                                </action>
+                                <action id="5" name="Push" sid="2453744572189798" type="GenericPins">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">GenericTitle.UID</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="2764110016486889" type="GenericHeader">
+                                    <param id="0" name="Object">GenericCard</param>
+                                    <param id="1" name="Image point (optional)">&quot;Header&quot;</param>
+                                </action>
+                                <action id="5" name="Push" sid="1500431747316612" type="GenericPins">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">GenericHeader.UID</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="3273078318188403" type="GenericBody">
+                                    <param id="0" name="Object">GenericCard</param>
+                                    <param id="1" name="Image point (optional)">&quot;Body&quot;</param>
+                                </action>
+                                <action id="5" name="Push" sid="2689170916566556" type="GenericPins">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">GenericBody.UID</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="2257325323362532" type="GenericFooter">
+                                    <param id="0" name="Object">GenericCard</param>
+                                    <param id="1" name="Image point (optional)">&quot;Footer&quot;</param>
+                                </action>
+                                <action id="5" name="Push" sid="4602197177989892" type="GenericPins">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">GenericFooter.UID</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="0" name="Add key" sid="1617345798449599" type="GenericData">
+                                    <param id="0" name="Key">&quot;Footer&quot;</param>
+                                    <param id="1" name="Value">&quot;Footer&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6382286607401866">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="1115946715867525" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Mini&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8084090373407446" type="System">
+                                    <param id="0" name="Object to create">MiniCard</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4240887992042745" type="System">
+                                    <param id="0" name="Variable">CardUID</param>
+                                    <param id="1" name="Value">MiniCard.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3512765388622118" type="MiniCard">
+                                    <param id="0" name="Instance variable">DeckUID</param>
+                                    <param id="1" name="Value">MiniDeck.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6964461752601013" type="MiniCard">
+                                    <param id="0" name="Instance variable">PinsUID</param>
+                                    <param id="1" name="Value">MiniPins.UID</param>
+                                </action>
+                                <action id="1" name="Set size" sid="8012751538444814" type="MiniPins">
+                                    <param id="0" name="Width">0</param>
+                                    <param id="1" name="Height">1</param>
+                                    <param id="2" name="Depth">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="5512212201610992" type="MiniTitle">
+                                    <param id="0" name="Object">MiniCard</param>
+                                    <param id="1" name="Image point (optional)">&quot;Title&quot;</param>
+                                </action>
+                                <action id="5" name="Push" sid="801805986972565" type="MiniPins">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">MiniTitle.UID</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="8457283201141719" type="MiniBody">
+                                    <param id="0" name="Object">MiniCard</param>
+                                    <param id="1" name="Image point (optional)">&quot;Body&quot;</param>
+                                </action>
+                                <action id="5" name="Push" sid="9858593968340818" type="MiniPins">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">MiniBody.UID</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="482555960566683">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="4115861531213539" type="Cards">
+                                    <param id="0" name="Unique ID">CardUID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="705875496397238" type="Cards">
+                                    <param id="0" name="Instance variable">FacingUp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4110727405191153">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="7417825967745665" type="Decks">
+                                            <param id="0" name="Unique ID">Cards.DeckUID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="9691613284394572" type="Decks">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">CardUID</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8774130943847301">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="7395201139478144" type="Pins">
+                                            <param id="0" name="Unique ID">Cards.PinsUID</param>
+                                        </condition>
+                                        <condition id="3" name="For each element" sid="5555858678243564" type="Pins">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="8269719386308565">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="4491524047497934" type="CardTexts">
+                                                    <param id="0" name="Unique ID">Pins.CurValue</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-29" name="Move to object" sid="2735901191646288" type="CardTexts">
+                                                    <param id="0" name="Where">0</param>
+                                                    <param id="1" name="Object">Cards</param>
+                                                </action>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="3412655809224092" type="CardTexts">
+                                                    <param id="0" name="Pin to">Cards</param>
+                                                    <param id="1" name="Mode">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1982754574505355">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="5413724834039564" type="Function">
+                                    <param id="0" name="Value">CardUID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5107204877091717">
+                    <conditions>
+                        <condition id="0" name="On function" sid="314723475096767" type="Function">
+                            <param id="0" name="Name">&quot;FlipCard&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2509692483803496" type="Cards">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9824155451260141" type="Pins">
+                            <param id="0" name="Unique ID">Cards.PinsUID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7085631412897353">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5405672460245795" type="Cards">
+                                    <param id="0" name="Instance variable">FacingUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="7154157078969729" type="Cards">
+                                    <param id="0" name="Instance variable">FacingUp</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="7619672036328746" type="Cards">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8524281452134713">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="3059914604801112" type="Pins">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="5125983071345286" type="CardTexts">
+                                            <param id="0" name="Unique ID">Pins.CurValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="9448914550527551" type="CardTexts">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2165690147583989">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8039974743859888" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="7763117617959103" type="Cards">
+                                    <param id="0" name="Instance variable">FacingUp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="8871072360468353" type="Cards">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7683895800907129">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="8031426589525096" type="Pins">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="2803006409733234" type="CardTexts">
+                                            <param id="0" name="Unique ID">Pins.CurValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="1224075784847415" type="CardTexts">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8329534920686653" title="Init">
+            <sub-events>
+                <event-block sid="271985676910243">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5034628969665826" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1292716466811357" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Generic&quot;{###}&quot;Generic&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3597630761435543" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Generic&quot;{###}&quot;Generic&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6876143313670787" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Generic&quot;{###}&quot;Generic&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6982763293213767" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Generic&quot;{###}&quot;Generic&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9494424472706746" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Generic&quot;{###}&quot;Generic&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6308769326816007" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Mini&quot;{###}&quot;Mini&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5271241287380854" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Mini&quot;{###}&quot;Mini&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9982210415169532" type="Function">
+                            <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Mini&quot;{###}&quot;Mini&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="9239212013819739">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="6171617031019787" type="Function">
+                                    <param id="0" name="Name">&quot;GenerateCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Generic&quot;{###}&quot;Generic&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="2303967308995867">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="3961043997002449" type="Cards">
+                                            <param id="0" name="Unique ID">Function.ReturnValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="4569419199836801" type="Cards">
+                                            <param id="0" name="X">100</param>
+                                            <param id="1" name="Y">100</param>
+                                        </action>
+                                        <action disabled="1" id="-8" name="Set angle" sid="7627049871452286" type="Cards">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="9097788693545121" type="Function">
+                                            <param id="0" name="Name">&quot;FlipCard&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.ReturnValue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="446244317515307" title="Loop">
+            <sub-events>
+                <event-block sid="7266118613099167">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="5916920146448792" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Cards</param>
+                        </condition>
+                        <condition id="-17" name="Pick top/bottom" sid="7070848271105673" type="Cards">
+                            <param id="0" name="Which">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1256374928981059" type="Function">
+                            <param id="0" name="Name">&quot;FlipCard&quot;</param>
+                            <param id="1" name="Parameter {n}">Cards.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
