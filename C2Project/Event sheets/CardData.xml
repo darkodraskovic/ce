@@ -18,7 +18,7 @@
                         </action>
                         <action id="0" name="Add key" sid="5257589385707388" type="GenericData">
                             <param id="0" name="Key">&quot;Title&quot;</param>
-                            <param id="1" name="Value">&quot;Title&quot;</param>
+                            <param id="1" name="Value">&quot;Title2&quot;</param>
                         </action>
                         <action id="0" name="Add key" sid="2938798028807756" type="GenericData">
                             <param id="0" name="Key">&quot;Header&quot;</param>
@@ -26,28 +26,11 @@
                         </action>
                         <action id="0" name="Add key" sid="5375022628540093" type="GenericData">
                             <param id="0" name="Key">&quot;Body&quot;</param>
-                            <param id="1" name="Value">&quot;Body&quot;</param>
+                            <param id="1" name="Value">&quot;Body Stone&quot;</param>
                         </action>
                         <action id="0" name="Add key" sid="3014384811939811" type="GenericData">
                             <param id="0" name="Key">&quot;Footer&quot;</param>
                             <param id="1" name="Value">&quot;Footer&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3209842648935686">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Add key" sid="2537686347069593" type="MiniData">
-                            <param id="0" name="Key">&quot;Type&quot;</param>
-                            <param id="1" name="Value">&quot;Generic&quot;</param>
-                        </action>
-                        <action id="0" name="Add key" sid="8252437577668809" type="MiniData">
-                            <param id="0" name="Key">&quot;Title&quot;</param>
-                            <param id="1" name="Value">&quot;Title&quot;</param>
-                        </action>
-                        <action id="0" name="Add key" sid="3874071014814512" type="MiniData">
-                            <param id="0" name="Key">&quot;Body&quot;</param>
-                            <param id="1" name="Value">&quot;Body&quot;</param>
                         </action>
                     </actions>
                 </event-block>

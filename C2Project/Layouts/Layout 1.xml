@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="GenericCard" uid="0">
+                <instance type="StandardCard" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -37,10 +37,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Type>Generic</Type>
+                        <Type></Type>
                         <DataUID>0</DataUID>
-                        <PinsUID>0</PinsUID>
                         <DeckUID>0</DeckUID>
+                        <PinsUID>0</PinsUID>
                         <FacingUp>true</FacingUp>
                     </instance-variables>
                     <behavior-instances>
@@ -66,7 +66,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GenericHeader" uid="5">
+                <instance type="StandardHeader" uid="5">
                     <properties>
                         <text>Header</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -85,10 +85,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-26</x>
-                        <y>-208</y>
+                        <y>-206</y>
                         <z>0</z>
                         <width>116</width>
-                        <height>40</height>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -96,7 +96,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GenericBody" uid="6">
+                <instance type="StandardBody" uid="6">
                     <properties>
                         <text>Body</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -115,10 +115,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-26</x>
-                        <y>-164</y>
+                        <y>-162</y>
                         <z>0</z>
                         <width>116</width>
-                        <height>100</height>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -126,7 +126,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GenericFooter" uid="7">
+                <instance type="StandardFooter" uid="7">
                     <properties>
                         <text>Footer</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -156,7 +156,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GenericTitle" uid="4">
+                <instance type="StandardTitle" uid="4">
                     <properties>
                         <text>Title</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -186,7 +186,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MiniCard" uid="9">
+                <instance type="SmallCard" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -194,10 +194,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Type>Mini</Type>
+                        <Type></Type>
                         <DataUID>0</DataUID>
-                        <PinsUID>0</PinsUID>
                         <DeckUID>0</DeckUID>
+                        <PinsUID>0</PinsUID>
                         <FacingUp>true</FacingUp>
                     </instance-variables>
                     <behavior-instances>
@@ -223,7 +223,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MiniTitle" uid="12">
+                <instance type="SmallTitle" uid="12">
                     <properties>
                         <text>Title</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -253,7 +253,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MiniBody" uid="13">
+                <instance type="SmallBody" uid="13">
                     <properties>
                         <text>Body</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -272,10 +272,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>138</x>
-                        <y>-172</y>
+                        <y>-170</y>
                         <z>0</z>
                         <width>80</width>
-                        <height>100</height>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -289,7 +289,6 @@
     </layers>
     <nonworld-instances>
         <instance type="GenericData" uid="8" />
-        <instance type="MiniData" uid="10" />
         <instance type="GenericDeck" uid="3">
             <properties>
                 <width>0</width>
@@ -310,14 +309,14 @@
                 <Type>Mini</Type>
             </instance-variables>
         </instance>
-        <instance type="GenericPins" uid="14">
+        <instance type="StandardTextPins" uid="14">
             <properties>
                 <width>10</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="MiniPins" uid="15">
+        <instance type="SmallTextPins" uid="15">
             <properties>
                 <width>10</width>
                 <height>1</height>
