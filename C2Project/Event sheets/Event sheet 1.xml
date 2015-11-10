@@ -21,7 +21,7 @@
                             <param id="3" name="Y">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="8128928634482037" type="StandardCard">
-                            <param id="0" name="Instance variable">PinsUID</param>
+                            <param id="0" name="Instance variable">TextPinsUID</param>
                             <param id="1" name="Value">StandardTextPins.UID</param>
                         </action>
                         <action id="1" name="Set size" sid="1033703447718822" type="StandardTextPins">
@@ -72,7 +72,7 @@
                             <param id="3" name="Y">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="6842503819740964" type="SmallCard">
-                            <param id="0" name="Instance variable">PinsUID</param>
+                            <param id="0" name="Instance variable">TextPinsUID</param>
                             <param id="1" name="Value">SmallTextPins.UID</param>
                         </action>
                         <action id="1" name="Set size" sid="3191667911243134" type="SmallTextPins">
@@ -100,7 +100,6 @@
                     </actions>
                 </event-block>
                 <comment>Args: #0 CardUID, #1 DataUID, #2 DeckUID</comment>
-                <variable constant="0" name="Times" sid="5110185905053783" static="1" type="number">0</variable>
                 <event-block sid="3897869426523495">
                     <conditions>
                         <condition id="0" name="On function" sid="8496886038318163" type="Function">
@@ -112,23 +111,23 @@
                         <condition id="-14" name="Pick by unique ID" sid="701662526295458" type="Datas">
                             <param id="0" name="Unique ID">Function.Param(1)</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="190954966429558" type="Decks">
+                        <condition id="-14" name="Pick by unique ID" sid="190954966429558" type="Piles">
                             <param id="0" name="Unique ID">Function.Param(2)</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="5436609877861044" type="TextPins">
-                            <param id="0" name="Unique ID">Cards.PinsUID</param>
+                            <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="9572778304252139" type="Cards">
                             <param id="0" name="Instance variable">DeckUID</param>
-                            <param id="1" name="Value">Decks.UID</param>
+                            <param id="1" name="Value">Piles.UID</param>
                         </action>
                         <action id="-10" name="Set value" sid="8286404648327547" type="Cards">
                             <param id="0" name="Instance variable">DataUID</param>
                             <param id="1" name="Value">Datas.UID</param>
                         </action>
-                        <action id="5" name="Push" sid="6876977444173205" type="Decks">
+                        <action id="5" name="Push" sid="6876977444173205" type="Piles">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                             <param id="2" name="Axis">0</param>
@@ -158,7 +157,7 @@
                                     <param id="1" name="Image point (optional)">Self.Text</param>
                                 </action>
                                 <action id="0" name="Set text" sid="8804297982343035" type="CardTexts">
-                                    <param id="0" name="Text">Datas.Get(CardTexts.Text) &amp; &quot; &quot; &amp; Times</param>
+                                    <param id="0" name="Text">Datas.Get(CardTexts.Text) &amp; &quot; &quot; &amp; Cards.UID</param>
                                 </action>
                                 <action id="-29" name="Move to object" sid="7296238367863081" type="CardTexts">
                                     <param id="0" name="Where">0</param>
@@ -182,7 +181,7 @@
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="9824155451260141" type="TextPins">
-                            <param id="0" name="Unique ID">Cards.PinsUID</param>
+                            <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -257,10 +256,210 @@
         </event-group>
         <event-group description="" sid="45509472458599" title="Deck &amp; Piles">
             <sub-events>
-                <event-block sid="2859181558419234">
-                    <conditions />
-                    <actions />
-                </event-block>
+                <event-group description="" sid="6311730085464112" title="Logic">
+                    <sub-events>
+                        <comment>Args: #1 PileUID</comment>
+                        <event-block sid="2859181558419234">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1244909714869021" type="Function">
+                                    <param id="0" name="Name">&quot;CopyPile&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="1360717814352408" type="System">
+                                    <param id="0" name="Object to create">GenericPile</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="8788918528233581" type="Function">
+                                    <param id="0" name="Value">GenericPile.UID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7046533656453441">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="4641781159179531" type="Piles">
+                                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                                        </condition>
+                                        <condition id="3" name="For each element" sid="2188858491116396" type="Piles">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="8595491261607238" type="GenericPile">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">Piles.CurValue</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Args: #1 PileUID</comment>
+                        <event-block sid="9131381905165108">
+                            <conditions>
+                                <condition id="0" name="On function" sid="3136024223872553" type="Function">
+                                    <param id="0" name="Name">&quot;ReversePile&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9523045583845299">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="1120478212933712" type="Piles">
+                                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Reverse" sid="4948088636301792" type="Piles">
+                                            <param id="0" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5081971380372687">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3645768504578203" type="Function">
+                                            <param id="0" name="Name">&quot;SetPileZ&quot;</param>
+                                            <param id="1" name="Parameter {n}">Piles.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <variable constant="0" name="Length" sid="1942456575279078" static="0" type="number">0</variable>
+                        <variable constant="0" name="Temp" sid="2233998065916991" static="0" type="number">0</variable>
+                        <variable constant="0" name="Index" sid="3544144721579832" static="0" type="number">0</variable>
+                        <event-block sid="9012155424913158">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4120123644351588" type="Function">
+                                    <param id="0" name="Name">&quot;ShufflePile&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="7447251117329402" type="Piles">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3826804223690427" type="System">
+                                    <param id="0" name="Variable">Length</param>
+                                    <param id="1" name="Value">Piles.Width</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7347672487124832">
+                                    <conditions>
+                                        <condition id="-23" name="While" sid="4177750593610443" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="5972898205319983" type="System">
+                                            <param id="0" name="Variable">Length</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="2009294226650425" type="System">
+                                            <param id="0" name="Variable">Index</param>
+                                            <param id="1" name="Value">int(random(Length))</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9192528974630786" type="System">
+                                            <param id="0" name="Variable">Temp</param>
+                                            <param id="1" name="Value">Piles.At(Index)</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="9032324655979674" type="Piles">
+                                            <param id="0" name="X">Index</param>
+                                            <param id="1" name="Value">Piles.At(Length)</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="3146652262649514" type="Piles">
+                                            <param id="0" name="X">Length</param>
+                                            <param id="1" name="Value">Temp</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7175106221312687" type="System">
+                                            <param id="0" name="Variable">Length</param>
+                                            <param id="1" name="Value">Length - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8626834307565072">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="4925704846288552" type="Function">
+                                            <param id="0" name="Name">&quot;SetPileZ&quot;</param>
+                                            <param id="1" name="Parameter {n}">Piles.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="779473094624247" title="Graphics">
+                    <sub-events>
+                        <comment>Args: #1 PileUID</comment>
+                        <event-block sid="6971157342046533">
+                            <conditions>
+                                <condition id="0" name="On function" sid="2219123510221978" type="Function">
+                                    <param id="0" name="Name">&quot;SetPileZ&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="3980256213272983" type="Piles">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="3" name="For each element" sid="813227255069261" type="Piles">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="97646944516755" type="Cards">
+                                    <param id="0" name="Unique ID">Piles.CurValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Move to top" sid="7426854529565208" type="Cards" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7840193693850982">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="671913300060641" type="TextPins">
+                                            <param id="0" name="Unique ID">Cards.TextPinsUID</param>
+                                        </condition>
+                                        <condition id="3" name="For each element" sid="5968263577445608" type="TextPins">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="9097996924364319" type="CardTexts">
+                                            <param id="0" name="Unique ID">TextPins.CurValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-29" name="Move to object" sid="6850444973959607" type="CardTexts">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">Cards</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Args: #1 PileUID, #1 X, #2 Y</comment>
+                        <event-block sid="4146142954704058">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5628048799342626" type="Function">
+                                    <param id="0" name="Name">&quot;SetPilePosition&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="5561180817818656" type="Piles">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="3" name="For each element" sid="7848075944052048" type="Piles">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="8111894018754846" type="Cards">
+                                    <param id="0" name="Unique ID">Piles.CurValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="7224487288191257" type="Cards">
+                                    <param id="0" name="X">Function.Param(1)</param>
+                                    <param id="1" name="Y">Function.Param(2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="8329534920686653" title="Init">
@@ -269,40 +468,67 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="5034628969665826" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="1292716466811357" type="Function">
-                            <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                            <param id="1" name="Parameter {n}">GenericData.UID{###}GenericDeck.UID</param>
-                        </action>
-                        <action id="0" name="Call function" sid="2495615799953761" type="Function">
-                            <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                            <param id="1" name="Parameter {n}">GenericData.UID{###}GenericDeck.UID</param>
-                        </action>
-                        <action id="0" name="Call function" sid="282181048698636" type="Function">
-                            <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                            <param id="1" name="Parameter {n}">GenericData.UID{###}GenericDeck.UID</param>
-                        </action>
-                        <action id="0" name="Call function" sid="1482374246339821" type="Function">
-                            <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                            <param id="1" name="Parameter {n}">GenericData.UID{###}GenericDeck.UID</param>
-                        </action>
-                        <action id="0" name="Call function" sid="2387919189792449" type="Function">
-                            <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                            <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
-                        </action>
-                        <action id="0" name="Call function" sid="3020520863907867" type="Function">
-                            <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                            <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
-                        </action>
-                        <action id="0" name="Call function" sid="870884221931046" type="Function">
-                            <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                            <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
-                        </action>
-                        <action id="0" name="Call function" sid="4822719718474051" type="Function">
-                            <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                            <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6297596089038933">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="8542297047783765" type="Function">
+                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3251130104361836" type="Function">
+                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7419376559032245" type="Function">
+                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2628165607466698" type="Function">
+                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="5752476290287709" type="Function">
+                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="7394370523772398" type="Function">
+                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="949788557144273" type="Function">
+                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="7922527019764846" type="Function">
+                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
+                                    <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5321825559035106">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="3464462876209835" type="Function">
+                                    <param id="0" name="Name">&quot;CopyPile&quot;</param>
+                                    <param id="1" name="Parameter {n}">StandardDeck.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3654701573771351" type="Function">
+                                    <param id="0" name="Name">&quot;SetPilePosition&quot;</param>
+                                    <param id="1" name="Parameter {n}">Piles.UID{###}200{###}100</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="3759276258454125" type="Function">
+                                    <param id="0" name="Name">&quot;ReversePile&quot;</param>
+                                    <param id="1" name="Parameter {n}">Piles.UID</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="6013238800109494" type="Function">
+                                    <param id="0" name="Name">&quot;ShufflePile&quot;</param>
+                                    <param id="1" name="Parameter {n}">Piles.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

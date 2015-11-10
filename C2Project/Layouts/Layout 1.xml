@@ -40,7 +40,7 @@
                         <Type></Type>
                         <DataUID>0</DataUID>
                         <DeckUID>0</DeckUID>
-                        <PinsUID>0</PinsUID>
+                        <TextPinsUID>0</TextPinsUID>
                         <FacingUp>true</FacingUp>
                     </instance-variables>
                     <behavior-instances>
@@ -197,7 +197,7 @@
                         <Type></Type>
                         <DataUID>0</DataUID>
                         <DeckUID>0</DeckUID>
-                        <PinsUID>0</PinsUID>
+                        <TextPinsUID>0</TextPinsUID>
                         <FacingUp>true</FacingUp>
                     </instance-variables>
                     <behavior-instances>
@@ -289,7 +289,7 @@
     </layers>
     <nonworld-instances>
         <instance type="GenericData" uid="8" />
-        <instance type="GenericDeck" uid="3">
+        <instance type="StandardDeck" uid="3">
             <properties>
                 <width>0</width>
                 <height>1</height>
@@ -322,6 +322,16 @@
                 <height>1</height>
                 <depth>1</depth>
             </properties>
+        </instance>
+        <instance type="GenericPile" uid="10">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+            <instance-variables>
+                <Type>Generic</Type>
+            </instance-variables>
         </instance>
     </nonworld-instances>
     <effects />
