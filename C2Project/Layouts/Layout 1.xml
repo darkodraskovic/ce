@@ -38,6 +38,7 @@
                     </properties>
                     <instance-variables>
                         <Type>Generic</Type>
+                        <DataUID>0</DataUID>
                         <PinsUID>0</PinsUID>
                         <DeckUID>0</DeckUID>
                         <FacingUp>true</FacingUp>
@@ -194,6 +195,7 @@
                     </properties>
                     <instance-variables>
                         <Type>Mini</Type>
+                        <DataUID>0</DataUID>
                         <PinsUID>0</PinsUID>
                         <DeckUID>0</DeckUID>
                         <FacingUp>true</FacingUp>

@@ -226,6 +226,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="Type" sid="4906132138738571" type="string" />
+                <instance-variable name="DataUID" sid="483164185087395" type="number" />
                 <instance-variable name="PinsUID" sid="3465910369710021" type="number" />
                 <instance-variable name="DeckUID" sid="7389795864446226" type="number" />
                 <instance-variable name="FacingUp" sid="522321555947145" type="boolean" />
