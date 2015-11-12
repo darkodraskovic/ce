@@ -40,6 +40,7 @@
                         <Type></Type>
                         <DataUID>0</DataUID>
                         <DeckUID>0</DeckUID>
+                        <PileUID>0</PileUID>
                         <TextPinsUID>0</TextPinsUID>
                         <FacingUp>true</FacingUp>
                     </instance-variables>
@@ -197,6 +198,7 @@
                         <Type></Type>
                         <DataUID>0</DataUID>
                         <DeckUID>0</DeckUID>
+                        <PileUID>0</PileUID>
                         <TextPinsUID>0</TextPinsUID>
                         <FacingUp>true</FacingUp>
                     </instance-variables>
@@ -299,7 +301,7 @@
                 <Type>Generic</Type>
             </instance-variables>
         </instance>
-        <instance type="MiniDeck" uid="11">
+        <instance type="SmallDeck" uid="11">
             <properties>
                 <width>0</width>
                 <height>1</height>

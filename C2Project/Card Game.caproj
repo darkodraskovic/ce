@@ -199,7 +199,7 @@
             <object-type global="1" name="StandardDeck" sid="1155166700531714">
                 <plugin id="Arr" />
             </object-type>
-            <object-type global="1" name="MiniDeck" sid="9452738664010549">
+            <object-type global="1" name="SmallDeck" sid="9452738664010549">
                 <plugin id="Arr" />
             </object-type>
             <object-type global="1" name="Pile" sid="5376891541430363">
@@ -232,6 +232,7 @@
                 <instance-variable name="Type" sid="4906132138738571" type="string" />
                 <instance-variable name="DataUID" sid="483164185087395" type="number" />
                 <instance-variable name="DeckUID" sid="7389795864446226" type="number" />
+                <instance-variable name="PileUID" sid="815036681115766" type="number" />
                 <instance-variable name="TextPinsUID" sid="3465910369710021" type="number" />
                 <instance-variable name="FacingUp" sid="522321555947145" type="boolean" />
             </instance-variables>
@@ -243,8 +244,8 @@
         </family>
         <family name="Piles" plugin-id="Arr" sid="1091432558613702">
             <members>
-                <member>MiniDeck</member>
                 <member>Pile</member>
+                <member>SmallDeck</member>
                 <member>StandardDeck</member>
             </members>
             <instance-variables>
