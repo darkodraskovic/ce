@@ -181,11 +181,6 @@
                     </container>
                 </object-type>
             </object-folder>
-            <object-folder name="Data">
-                <object-type global="1" name="GenericData" sid="7172834122007283">
-                    <plugin id="Dictionary" />
-                </object-type>
-            </object-folder>
         </object-folder>
         <object-folder name="Sys">
             <object-type name="Function" sid="4541220785232194">
@@ -193,6 +188,9 @@
             </object-type>
             <object-type name="Mouse" sid="9649518080542992">
                 <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Debug" sid="8366483956389033">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="Deck">
@@ -204,6 +202,24 @@
             </object-type>
             <object-type global="1" name="Pile" sid="5376891541430363">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="PilePinTarget" sid="8677019461261348">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="2577949515304531">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9091936296752189" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Data">
+            <object-type global="1" name="GenericData" sid="7172834122007283">
+                <plugin id="Dictionary" />
             </object-type>
         </object-folder>
     </object-folder>
@@ -239,6 +255,9 @@
             <behaviors>
                 <behavior-type name="DragDrop" sid="8082562073645073">
                     <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="2472393693205307">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
         </family>
