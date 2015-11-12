@@ -202,7 +202,7 @@
             <object-type global="1" name="MiniDeck" sid="9452738664010549">
                 <plugin id="Arr" />
             </object-type>
-            <object-type global="1" name="GenericPile" sid="5376891541430363">
+            <object-type global="1" name="Pile" sid="5376891541430363">
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
@@ -243,8 +243,8 @@
         </family>
         <family name="Piles" plugin-id="Arr" sid="1091432558613702">
             <members>
-                <member>GenericPile</member>
                 <member>MiniDeck</member>
+                <member>Pile</member>
                 <member>StandardDeck</member>
             </members>
             <instance-variables>
