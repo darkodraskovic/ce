@@ -390,11 +390,185 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <variable constant="0" name="CardUID" sid="38512782495294" static="0" type="number">0</variable>
+                        <comment>Args: #0 PileUID (source), #1 PileUID (dest), #2 &quot;top&quot; or &quot;bottom&quot; or &quot;random&quot; #3 &quot;top&quot; or &quot;bottom&quot; or &quot;random&quot;</comment>
+                        <variable constant="0" name="RandomIndex" sid="2161301695589014" static="0" type="number">0</variable>
+                        <event-block sid="3889879174164169">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8317423425880724" type="Function">
+                                    <param id="0" name="Name">&quot;DrawCard&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Pick source pile</comment>
+                                <event-block sid="3435311314877878">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="6101925706488633" type="Piles">
+                                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5691604458289687">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="7459904919287695" type="System">
+                                                    <param id="0" name="First value">Function.Param(2)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;top&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7133136400350699" type="System">
+                                                    <param id="0" name="Variable">CardUID</param>
+                                                    <param id="1" name="Value">Piles.Back</param>
+                                                </action>
+                                                <action id="6" name="Pop" sid="304063681590948" type="Piles">
+                                                    <param id="0" name="Where">0</param>
+                                                    <param id="1" name="Axis">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2582384805906642">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="3077044512393792" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="6954882626321907" type="System">
+                                                    <param id="0" name="First value">Function.Param(2)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;bottom&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="4599133749968547" type="System">
+                                                    <param id="0" name="Variable">CardUID</param>
+                                                    <param id="1" name="Value">Piles.Front</param>
+                                                </action>
+                                                <action id="6" name="Pop" sid="310889504466491" type="Piles">
+                                                    <param id="0" name="Where">1</param>
+                                                    <param id="1" name="Axis">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="7929449007923048">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="9863779729845737" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="4022530908554666" type="System">
+                                                    <param id="0" name="First value">Function.Param(2)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;random&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="2027251121082921" type="System">
+                                                    <param id="0" name="Variable">RandomIndex</param>
+                                                    <param id="1" name="Value">int(random(Piles.Width))</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="4511928585859392" type="System">
+                                                    <param id="0" name="Variable">CardUID</param>
+                                                    <param id="1" name="Value">Piles.At(RandomIndex)</param>
+                                                </action>
+                                                <action id="9" name="Delete" sid="5242975631395744" type="Piles">
+                                                    <param id="0" name="Index">RandomIndex</param>
+                                                    <param id="1" name="Axis">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Pick destination pile</comment>
+                                <event-block sid="4515562936092209">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="8242011783203984" type="Piles">
+                                            <param id="0" name="Unique ID">Function.Param(1)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1257483617167273" type="Function">
+                                            <param id="0" name="Name">&quot;InsertCard&quot;</param>
+                                            <param id="1" name="Parameter {n}">CardUID{###}Piles.UID{###}Function.Param(3)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Set return value to CardUID</comment>
+                                <event-block sid="9341036173715731">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="547177819070886" type="Function">
+                                            <param id="0" name="Value">CardUID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Args: #0 CardUID, #1 PileUID, #2 &quot;top&quot; or &quot;bottom&quot; or &quot;random&quot;</comment>
+                        <event-block sid="2093385880881479">
+                            <conditions>
+                                <condition id="0" name="On function" sid="8804821158772746" type="Function">
+                                    <param id="0" name="Name">&quot;InsertCard&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="4788650177037451" type="Piles">
+                                    <param id="0" name="Unique ID">Function.Param(1)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4933849849343369">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9632492823732209" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;top&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="2491733924461992" type="Piles">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2563050012549839">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6388954898325958" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="9468376485644089" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;bottom&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="8690949013804059" type="Piles">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="442586783944548">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4286703724466197" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="5635226276473726" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;random&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="10" name="Insert" sid="4586144195725918" type="Piles">
+                                            <param id="0" name="Value">Function.Param(0)</param>
+                                            <param id="1" name="Index">int(random(Piles.Width))</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="779473094624247" title="Graphics">
                     <sub-events>
-                        <comment>Args: #1 PileUID</comment>
+                        <comment>Args: #0 PileUID</comment>
                         <event-block sid="6971157342046533">
                             <conditions>
                                 <condition id="0" name="On function" sid="2219123510221978" type="Function">
@@ -435,7 +609,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Args: #1 PileUID, #1 X, #2 Y</comment>
+                        <comment>Args: #0 PileUID, #1 X, #2 Y</comment>
                         <event-block sid="4146142954704058">
                             <conditions>
                                 <condition id="0" name="On function" sid="5628048799342626" type="Function">
@@ -489,19 +663,19 @@
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
                                     <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="5752476290287709" type="Function">
+                                <action id="0" name="Call function" sid="5752476290287709" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
                                     <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="7394370523772398" type="Function">
+                                <action id="0" name="Call function" sid="7394370523772398" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
                                     <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="949788557144273" type="Function">
+                                <action id="0" name="Call function" sid="949788557144273" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
                                     <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="7922527019764846" type="Function">
+                                <action id="0" name="Call function" sid="7922527019764846" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
                                     <param id="1" name="Parameter {n}">GenericData.UID{###}MiniDeck.UID</param>
                                 </action>
