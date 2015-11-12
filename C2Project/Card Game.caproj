@@ -250,6 +250,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="Type" sid="118632860871426" type="string" />
+                <instance-variable name="Selected" sid="4859458805314714" type="boolean" />
             </instance-variables>
         </family>
         <family name="TextPins" plugin-id="Arr" sid="1900585792951669">

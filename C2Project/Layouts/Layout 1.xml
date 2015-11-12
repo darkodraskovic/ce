@@ -299,6 +299,7 @@
             </properties>
             <instance-variables>
                 <Type>Generic</Type>
+                <Selected>false</Selected>
             </instance-variables>
         </instance>
         <instance type="SmallDeck" uid="11">
@@ -309,6 +310,7 @@
             </properties>
             <instance-variables>
                 <Type>Mini</Type>
+                <Selected>false</Selected>
             </instance-variables>
         </instance>
         <instance type="StandardTextPins" uid="14">
@@ -333,6 +335,7 @@
             </properties>
             <instance-variables>
                 <Type>Generic</Type>
+                <Selected>false</Selected>
             </instance-variables>
         </instance>
     </nonworld-instances>
