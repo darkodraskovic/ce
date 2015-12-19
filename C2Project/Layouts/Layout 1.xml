@@ -37,12 +37,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Type></Type>
                         <DataUID>0</DataUID>
                         <DeckUID>0</DeckUID>
                         <PileUID>0</PileUID>
                         <TextPinsUID>0</TextPinsUID>
                         <FacingUp>true</FacingUp>
+                        <Selected>false</Selected>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
@@ -196,12 +196,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Type></Type>
                         <DataUID>0</DataUID>
                         <DeckUID>0</DeckUID>
                         <PileUID>0</PileUID>
                         <TextPinsUID>0</TextPinsUID>
                         <FacingUp>true</FacingUp>
+                        <Selected>false</Selected>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
@@ -398,7 +398,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="SmallTextPins" uid="15">
+        <instance type="MiniTextPins" uid="15">
             <properties>
                 <width>10</width>
                 <height>1</height>

@@ -75,19 +75,19 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="6842503819740964" type="SmallCard">
                                     <param id="0" name="Instance variable">TextPinsUID</param>
-                                    <param id="1" name="Value">SmallTextPins.UID</param>
+                                    <param id="1" name="Value">MiniTextPins.UID</param>
                                 </action>
-                                <action id="1" name="Set size" sid="3191667911243134" type="SmallTextPins">
+                                <action id="1" name="Set size" sid="3191667911243134" type="MiniTextPins">
                                     <param id="0" name="Width">0</param>
                                     <param id="1" name="Height">1</param>
                                     <param id="2" name="Depth">1</param>
                                 </action>
-                                <action id="5" name="Push" sid="6833212872206749" type="SmallTextPins">
+                                <action id="5" name="Push" sid="6833212872206749" type="MiniTextPins">
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Value">SmallTitle.UID</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
-                                <action id="5" name="Push" sid="6635488964572638" type="SmallTextPins">
+                                <action id="5" name="Push" sid="6635488964572638" type="MiniTextPins">
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Value">SmallBody.UID</param>
                                     <param id="2" name="Axis">0</param>
@@ -113,59 +113,71 @@
                                 <condition id="-14" name="Pick by unique ID" sid="701662526295458" type="Datas">
                                     <param id="0" name="Unique ID">Function.Param(1)</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="190954966429558" type="Piles">
+                                <condition id="-14" name="Pick by unique ID" sid="190954966429558" type="Sets">
                                     <param id="0" name="Unique ID">Function.Param(2)</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="5436609877861044" type="TextPins">
-                                    <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="9572778304252139" type="Cards">
-                                    <param id="0" name="Instance variable">DeckUID</param>
-                                    <param id="1" name="Value">Piles.UID</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="8286404648327547" type="Cards">
                                     <param id="0" name="Instance variable">DataUID</param>
                                     <param id="1" name="Value">Datas.UID</param>
                                 </action>
-                                <action id="5" name="Push" sid="6876977444173205" type="Piles">
+                                <action id="-10" name="Set value" sid="9572778304252139" type="Cards">
+                                    <param id="0" name="Instance variable">DeckUID</param>
+                                    <param id="1" name="Value">Sets.UID</param>
+                                </action>
+                                <action id="5" name="Push" sid="6876977444173205" type="Sets">
                                     <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
+                                    <param id="1" name="Value">Cards.UID</param>
                                     <param id="2" name="Axis">0</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="950518895885697" type="Cards">
                                     <param id="0" name="Instance variable">FacingUp</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="2209461351882742" type="Cards">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Value">Datas.Get(&quot;Type&quot;)</param>
+                                <action id="0" name="Call function" sid="3740813761795944" type="Function">
+                                    <param id="0" name="Name">&quot;InitCardPins&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>Args: #0 CardUID</comment>
+                        <event-block sid="8132279453062761">
+                            <conditions>
+                                <condition id="0" name="On function" sid="4993475998930364" type="Function">
+                                    <param id="0" name="Name">&quot;InitCardPins&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="7064528885509399" type="Cards">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="4103123453306292">
+                                <event-block sid="4708973730556692">
                                     <conditions>
-                                        <condition id="3" name="For each element" sid="9064187370136506" type="TextPins">
+                                        <condition id="-14" name="Pick by unique ID" sid="8652787190524473" type="TextPins">
+                                            <param id="0" name="Unique ID">Cards.TextPinsUID</param>
+                                        </condition>
+                                        <condition id="3" name="For each element" sid="7754401051280871" type="TextPins">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="9457376199448613" type="CardTexts">
+                                        <condition id="-14" name="Pick by unique ID" sid="6723658007180505" type="CardTexts">
                                             <param id="0" name="Unique ID">TextPins.CurValue</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-4" name="Set position to another object" sid="6159141379502268" type="CardTexts">
+                                        <action id="-4" name="Set position to another object" sid="8508874950950254" type="CardTexts">
                                             <param id="0" name="Object">Cards</param>
                                             <param id="1" name="Image point (optional)">Self.Text</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="8804297982343035" type="CardTexts">
+                                        <action id="0" name="Set text" sid="2642762322434058" type="CardTexts">
                                             <param id="0" name="Text">Datas.Get(CardTexts.Text) &amp; &quot; &quot; &amp; Cards.UID</param>
                                         </action>
-                                        <action id="-29" name="Move to object" sid="7296238367863081" type="CardTexts">
+                                        <action id="-29" name="Move to object" sid="7062319364055701" type="CardTexts">
                                             <param id="0" name="Where">0</param>
                                             <param id="1" name="Object">Cards</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="5189532993110523" type="CardTexts">
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="9196177541923518" type="CardTexts">
                                             <param id="0" name="Pin to">Cards</param>
                                             <param id="1" name="Mode">0</param>
                                         </action>
@@ -178,19 +190,92 @@
                 <event-group description="" sid="6309865606417168" title="Card Graphics">
                     <sub-events>
                         <comment>Args: #0CardUID</comment>
+                        <event-block sid="4169456494314089">
+                            <conditions>
+                                <condition id="0" name="On function" sid="1405422617283355" type="Function">
+                                    <param id="0" name="Name">&quot;ShowFace&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="201764789571914" type="Cards">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1898789281192237" type="TextPins">
+                                    <param id="0" name="Unique ID">Cards.TextPinsUID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="7293281306656651" type="Cards">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8128145651128038">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="3857803025016065" type="TextPins">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="488202631837037" type="CardTexts">
+                                            <param id="0" name="Unique ID">TextPins.CurValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="8850202413845393" type="CardTexts">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Args: #0CardUID</comment>
+                        <event-block sid="582784574360167">
+                            <conditions>
+                                <condition id="0" name="On function" sid="17602854425141" type="Function">
+                                    <param id="0" name="Name">&quot;ShowBack&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1852704861529" type="Cards">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="2526081623483385" type="TextPins">
+                                    <param id="0" name="Unique ID">Cards.TextPinsUID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="2460651864430181" type="Cards">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9957017392152404">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="5158939492794774" type="TextPins">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="9186419005835684" type="CardTexts">
+                                            <param id="0" name="Unique ID">TextPins.CurValue</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="8289482870727071" type="CardTexts">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Args: #0CardUID</comment>
                         <event-block sid="5107204877091717">
                             <conditions>
                                 <condition id="0" name="On function" sid="314723475096767" type="Function">
                                     <param id="0" name="Name">&quot;FlipCard&quot;</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="2509692483803496" type="Cards">
+                                <condition id="-14" name="Pick by unique ID" sid="6213351553607304" type="Cards">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="9824155451260141" type="TextPins">
-                                    <param id="0" name="Unique ID">Cards.TextPinsUID</param>
-                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="1525945561911971" type="Cards">
+                                    <param id="0" name="Instance variable">FacingUp</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="7085631412897353">
                                     <conditions>
@@ -199,62 +284,69 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="7154157078969729" type="Cards">
-                                            <param id="0" name="Instance variable">FacingUp</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="7619672036328746" type="Cards">
-                                            <param id="0" name="Frame number">1</param>
+                                        <action id="0" name="Call function" sid="2467599222478273" type="Function">
+                                            <param id="0" name="Name">&quot;ShowFace&quot;</param>
+                                            <param id="1" name="Parameter {n}">Cards.UID</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="8524281452134713">
-                                            <conditions>
-                                                <condition id="3" name="For each element" sid="3059914604801112" type="TextPins">
-                                                    <param id="0" name="Axes">2</param>
-                                                </condition>
-                                                <condition id="-14" name="Pick by unique ID" sid="5125983071345286" type="CardTexts">
-                                                    <param id="0" name="Unique ID">TextPins.CurValue</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="9448914550527551" type="CardTexts">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                                 <event-block sid="2165690147583989">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="8039974743859888" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="7763117617959103" type="Cards">
-                                            <param id="0" name="Instance variable">FacingUp</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="8871072360468353" type="Cards">
-                                            <param id="0" name="Frame number">0</param>
+                                        <action id="0" name="Call function" sid="2962250540825131" type="Function">
+                                            <param id="0" name="Name">&quot;ShowBack&quot;</param>
+                                            <param id="1" name="Parameter {n}">Cards.UID</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="7683895800907129">
-                                            <conditions>
-                                                <condition id="3" name="For each element" sid="8031426589525096" type="TextPins">
-                                                    <param id="0" name="Axes">2</param>
-                                                </condition>
-                                                <condition id="-14" name="Pick by unique ID" sid="2803006409733234" type="CardTexts">
-                                                    <param id="0" name="Unique ID">TextPins.CurValue</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="1224075784847415" type="CardTexts">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="5031883556960833" title="Card Selection">
+                    <sub-events>
+                        <comment>TODO Args: #0CardUID</comment>
+                        <event-block sid="3341908330674792">
+                            <conditions>
+                                <condition id="0" name="On function" sid="5598613333448162" type="Function">
+                                    <param id="0" name="Name">&quot;SelectCard&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="9169208902475483" type="Cards">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5146043379768334" type="Cards">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Args: #0 CardUID, #1 key</comment>
+                        <event-block sid="2744968234330191">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6847222002913272" type="Function">
+                                    <param id="0" name="Name">&quot;GetCardDataValue&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="5537424626572158" type="Cards">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6407893688038873">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="8116808289557277" type="Datas">
+                                            <param id="0" name="Unique ID">Cards.DataUID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="1495844520428743" type="Function">
+                                            <param id="0" name="Value">Datas.Get(Function.Param(1))</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -286,7 +378,7 @@
                                     <sub-events>
                                         <event-block sid="7046533656453441">
                                             <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="4641781159179531" type="Piles">
+                                                <condition id="-14" name="Pick by unique ID" sid="4641781159179531" type="Sets">
                                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                                 </condition>
                                             </conditions>
@@ -294,14 +386,14 @@
                                             <sub-events>
                                                 <event-block sid="620951487533085">
                                                     <conditions>
-                                                        <condition id="3" name="For each element" sid="1357581319646595" type="Piles">
+                                                        <condition id="3" name="For each element" sid="1357581319646595" type="Sets">
                                                             <param id="0" name="Axes">2</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
                                                         <action id="5" name="Push" sid="8595491261607238" type="Pile">
                                                             <param id="0" name="Where">0</param>
-                                                            <param id="1" name="Value">Piles.CurValue</param>
+                                                            <param id="1" name="Value">Sets.CurValue</param>
                                                             <param id="2" name="Axis">0</param>
                                                         </action>
                                                     </actions>
@@ -361,10 +453,10 @@
                                         <condition id="0" name="On function" sid="1144509522471561" type="Function">
                                             <param id="0" name="Name">&quot;SetPileUIDs&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="4315264163082086" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="4315264163082086" type="Sets">
                                             <param id="0" name="Unique ID">Function.Param(0)</param>
                                         </condition>
-                                        <condition id="3" name="For each element" sid="3481134946230158" type="Piles">
+                                        <condition id="3" name="For each element" sid="3481134946230158" type="Sets">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
                                     </conditions>
@@ -373,13 +465,13 @@
                                         <event-block sid="7404932718967647">
                                             <conditions>
                                                 <condition id="-14" name="Pick by unique ID" sid="466474200201011" type="Cards">
-                                                    <param id="0" name="Unique ID">Piles.CurValue</param>
+                                                    <param id="0" name="Unique ID">Sets.CurValue</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-10" name="Set value" sid="5887664869813053" type="Cards">
                                                     <param id="0" name="Instance variable">PileUID</param>
-                                                    <param id="1" name="Value">Piles.UID</param>
+                                                    <param id="1" name="Value">Sets.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -400,12 +492,12 @@
                                     <sub-events>
                                         <event-block sid="9523045583845299">
                                             <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="1120478212933712" type="Piles">
+                                                <condition id="-14" name="Pick by unique ID" sid="1120478212933712" type="Sets">
                                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="7" name="Reverse" sid="4948088636301792" type="Piles">
+                                                <action id="7" name="Reverse" sid="4948088636301792" type="Sets">
                                                     <param id="0" name="Axis">0</param>
                                                 </action>
                                             </actions>
@@ -415,7 +507,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="3645768504578203" type="Function">
                                                     <param id="0" name="Name">&quot;SetPileZ&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Piles.UID</param>
+                                                    <param id="1" name="Parameter {n}">Sets.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -426,7 +518,7 @@
                                         <condition id="0" name="On function" sid="4120123644351588" type="Function">
                                             <param id="0" name="Name">&quot;ShufflePile&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="7447251117329402" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="7447251117329402" type="Sets">
                                             <param id="0" name="Unique ID">Function.Param(0)</param>
                                         </condition>
                                     </conditions>
@@ -438,7 +530,7 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="3826804223690427" type="System">
                                                     <param id="0" name="Variable">Length</param>
-                                                    <param id="1" name="Value">Piles.Width</param>
+                                                    <param id="1" name="Value">Sets.Width</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -460,13 +552,13 @@
                                                 </action>
                                                 <action id="-9" name="Set value" sid="9192528974630786" type="System">
                                                     <param id="0" name="Variable">Temp</param>
-                                                    <param id="1" name="Value">Piles.At(Index)</param>
+                                                    <param id="1" name="Value">Sets.At(Index)</param>
                                                 </action>
-                                                <action id="2" name="Set at X" sid="9032324655979674" type="Piles">
+                                                <action id="2" name="Set at X" sid="9032324655979674" type="Sets">
                                                     <param id="0" name="X">Index</param>
-                                                    <param id="1" name="Value">Piles.At(Length)</param>
+                                                    <param id="1" name="Value">Sets.At(Length)</param>
                                                 </action>
-                                                <action id="2" name="Set at X" sid="3146652262649514" type="Piles">
+                                                <action id="2" name="Set at X" sid="3146652262649514" type="Sets">
                                                     <param id="0" name="X">Length</param>
                                                     <param id="1" name="Value">Temp</param>
                                                 </action>
@@ -481,7 +573,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="4925704846288552" type="Function">
                                                     <param id="0" name="Name">&quot;SetPileZ&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Piles.UID</param>
+                                                    <param id="1" name="Parameter {n}">Sets.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -492,15 +584,16 @@
                         <event-group description="" sid="1748108458047829" title="Pile Arrangement">
                             <sub-events>
                                 <comment>Args: #0 PileUID (source), #1 PileUID (dest), #2 &quot;top&quot; or &quot;bottom&quot; or &quot;random&quot; #3 &quot;top&quot; or &quot;bottom&quot; or &quot;random&quot;</comment>
+                                <comment>Pick source pile</comment>
                                 <event-block sid="3889879174164169">
                                     <conditions>
                                         <condition id="0" name="On function" sid="8317423425880724" type="Function">
                                             <param id="0" name="Name">&quot;DrawCard&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="4249073416623841" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="4249073416623841" type="Sets">
                                             <param id="0" name="Unique ID">Function.Param(0)</param>
                                         </condition>
-                                        <condition id="6" inverted="1" name="Is empty" sid="8615509752215116" type="Piles" />
+                                        <condition id="6" inverted="1" name="Is empty" sid="8615509752215116" type="Sets" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -517,9 +610,9 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="7133136400350699" type="System">
                                                     <param id="0" name="Variable">CardUID</param>
-                                                    <param id="1" name="Value">Piles.Back</param>
+                                                    <param id="1" name="Value">Sets.Back</param>
                                                 </action>
-                                                <action id="6" name="Pop" sid="304063681590948" type="Piles">
+                                                <action id="6" name="Pop" sid="304063681590948" type="Sets">
                                                     <param id="0" name="Where">0</param>
                                                     <param id="1" name="Axis">0</param>
                                                 </action>
@@ -537,9 +630,9 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="4599133749968547" type="System">
                                                     <param id="0" name="Variable">CardUID</param>
-                                                    <param id="1" name="Value">Piles.Front</param>
+                                                    <param id="1" name="Value">Sets.Front</param>
                                                 </action>
-                                                <action id="6" name="Pop" sid="310889504466491" type="Piles">
+                                                <action id="6" name="Pop" sid="310889504466491" type="Sets">
                                                     <param id="0" name="Where">1</param>
                                                     <param id="1" name="Axis">0</param>
                                                 </action>
@@ -557,13 +650,13 @@
                                             <actions>
                                                 <action id="-9" name="Set value" sid="2027251121082921" type="System">
                                                     <param id="0" name="Variable">RandomIndex</param>
-                                                    <param id="1" name="Value">int(random(Piles.Width))</param>
+                                                    <param id="1" name="Value">int(random(Sets.Width))</param>
                                                 </action>
                                                 <action id="-9" name="Set value" sid="4511928585859392" type="System">
                                                     <param id="0" name="Variable">CardUID</param>
-                                                    <param id="1" name="Value">Piles.At(RandomIndex)</param>
+                                                    <param id="1" name="Value">Sets.At(RandomIndex)</param>
                                                 </action>
-                                                <action id="9" name="Delete" sid="5242975631395744" type="Piles">
+                                                <action id="9" name="Delete" sid="5242975631395744" type="Sets">
                                                     <param id="0" name="Index">RandomIndex</param>
                                                     <param id="1" name="Axis">0</param>
                                                 </action>
@@ -573,16 +666,16 @@
                                         <event-block sid="4515562936092209">
                                             <conditions>
                                                 <condition id="-19" name="Pick all" sid="3070582035279857" type="System">
-                                                    <param id="0" name="Object">Piles</param>
+                                                    <param id="0" name="Object">Sets</param>
                                                 </condition>
-                                                <condition id="-14" name="Pick by unique ID" sid="8242011783203984" type="Piles">
+                                                <condition id="-14" name="Pick by unique ID" sid="8242011783203984" type="Sets">
                                                     <param id="0" name="Unique ID">Function.Param(1)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="1257483617167273" type="Function">
                                                     <param id="0" name="Name">&quot;InsertCard&quot;</param>
-                                                    <param id="1" name="Parameter {n}">CardUID{###}Piles.UID{###}Function.Param(3)</param>
+                                                    <param id="1" name="Parameter {n}">CardUID{###}Sets.UID{###}Function.Param(3)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -595,7 +688,6 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <comment>Pick source pile</comment>
                                     </sub-events>
                                 </event-block>
                                 <comment>Args: #0 CardUID, #1 PileUID, #2 &quot;top&quot; or &quot;bottom&quot; or &quot;random&quot;</comment>
@@ -604,7 +696,7 @@
                                         <condition id="0" name="On function" sid="8804821158772746" type="Function">
                                             <param id="0" name="Name">&quot;InsertCard&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="4788650177037451" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="4788650177037451" type="Sets">
                                             <param id="0" name="Unique ID">Function.Param(1)</param>
                                         </condition>
                                     </conditions>
@@ -619,7 +711,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="5" name="Push" sid="2491733924461992" type="Piles">
+                                                <action id="5" name="Push" sid="2491733924461992" type="Sets">
                                                     <param id="0" name="Where">0</param>
                                                     <param id="1" name="Value">Function.Param(0)</param>
                                                     <param id="2" name="Axis">0</param>
@@ -636,7 +728,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="5" name="Push" sid="8690949013804059" type="Piles">
+                                                <action id="5" name="Push" sid="8690949013804059" type="Sets">
                                                     <param id="0" name="Where">1</param>
                                                     <param id="1" name="Value">Function.Param(0)</param>
                                                     <param id="2" name="Axis">0</param>
@@ -653,14 +745,14 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="10" name="Insert" sid="4586144195725918" type="Piles">
+                                                <action id="10" name="Insert" sid="4586144195725918" type="Sets">
                                                     <param id="0" name="Value">Function.Param(0)</param>
-                                                    <param id="1" name="Index">int(random(Piles.Width))</param>
+                                                    <param id="1" name="Index">int(random(Sets.Width))</param>
                                                     <param id="2" name="Axis">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="485584785658203">
+                                        <event-block disabled="1" sid="485584785658203">
                                             <conditions>
                                                 <condition id="-14" name="Pick by unique ID" sid="8584038025394151" type="Cards">
                                                     <param id="0" name="Unique ID">Function.Param(0)</param>
@@ -669,7 +761,7 @@
                                             <actions>
                                                 <action id="-10" name="Set value" sid="7364588348183434" type="Cards">
                                                     <param id="0" name="Instance variable">PileUID</param>
-                                                    <param id="1" name="Value">Piles.UID</param>
+                                                    <param id="1" name="Value">Sets.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -698,14 +790,14 @@
                                         <condition id="0" name="On function" sid="2219123510221978" type="Function">
                                             <param id="0" name="Name">&quot;SetPileZ&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="3980256213272983" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="3980256213272983" type="Sets">
                                             <param id="0" name="Unique ID">Function.Param(0)</param>
                                         </condition>
-                                        <condition id="3" name="For each element" sid="813227255069261" type="Piles">
+                                        <condition id="3" name="For each element" sid="813227255069261" type="Sets">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
                                         <condition id="-14" name="Pick by unique ID" sid="97646944516755" type="Cards">
-                                            <param id="0" name="Unique ID">Piles.CurValue</param>
+                                            <param id="0" name="Unique ID">Sets.CurValue</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -739,43 +831,20 @@
                                         <condition id="0" name="On function" sid="5628048799342626" type="Function">
                                             <param id="0" name="Name">&quot;SetPilePosition&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="5561180817818656" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="5561180817818656" type="Sets">
                                             <param id="0" name="Unique ID">Function.Param(0)</param>
                                         </condition>
-                                        <condition id="3" name="For each element" sid="7848075944052048" type="Piles">
+                                        <condition id="3" name="For each element" sid="7848075944052048" type="Sets">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
                                         <condition id="-14" name="Pick by unique ID" sid="8111894018754846" type="Cards">
-                                            <param id="0" name="Unique ID">Piles.CurValue</param>
+                                            <param id="0" name="Unique ID">Sets.CurValue</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Set position" sid="7224487288191257" type="Cards">
                                             <param id="0" name="X">Function.Param(1)</param>
                                             <param id="1" name="Y">Function.Param(2)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Args: #0 PileUID, #1 X, #2 Y</comment>
-                                <event-block sid="1702084197330002">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="7222263253568051" type="Function">
-                                            <param id="0" name="Name">&quot;MovePile&quot;</param>
-                                        </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="3555255586644923" type="Piles">
-                                            <param id="0" name="Unique ID">Function.Param(0)</param>
-                                        </condition>
-                                        <condition id="3" name="For each element" sid="7805305084056969" type="Piles">
-                                            <param id="0" name="Axes">2</param>
-                                        </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="1217818633987919" type="Cards">
-                                            <param id="0" name="Unique ID">Piles.CurValue</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Set position" sid="5184520251754843" type="Cards">
-                                            <param id="0" name="X">Cards.X</param>
-                                            <param id="1" name="Y">Cards.Y</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -789,7 +858,7 @@
                                         <condition id="0" name="On function" sid="7577996940128358" type="Function">
                                             <param id="0" name="Name">&quot;PinCardsToPile&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="5396980938575426" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="5396980938575426" type="Sets">
                                             <param id="0" name="Unique ID">Function.Param(0)</param>
                                         </condition>
                                     </conditions>
@@ -818,11 +887,11 @@
                                             <sub-events>
                                                 <event-block sid="5260609360177973">
                                                     <conditions>
-                                                        <condition id="3" name="For each element" sid="4535526904534512" type="Piles">
+                                                        <condition id="3" name="For each element" sid="4535526904534512" type="Sets">
                                                             <param id="0" name="Axes">2</param>
                                                         </condition>
                                                         <condition id="-14" name="Pick by unique ID" sid="7229312201272541" type="Cards">
-                                                            <param id="0" name="Unique ID">Piles.CurValue</param>
+                                                            <param id="0" name="Unique ID">Sets.CurValue</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -852,11 +921,11 @@
                                             <sub-events>
                                                 <event-block sid="8920792418719355">
                                                     <conditions>
-                                                        <condition id="3" name="For each element" sid="9301259278025096" type="Piles">
+                                                        <condition id="3" name="For each element" sid="9301259278025096" type="Sets">
                                                             <param id="0" name="Axes">2</param>
                                                         </condition>
                                                         <condition id="-14" name="Pick by unique ID" sid="6712992410866801" type="Cards">
-                                                            <param id="0" name="Unique ID">Piles.CurValue</param>
+                                                            <param id="0" name="Unique ID">Sets.CurValue</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -876,7 +945,7 @@
                                         <condition id="0" name="On function" sid="3518913435017219" type="Function">
                                             <param id="0" name="Name">&quot;SelectPile&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="4594423346890724" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="4594423346890724" type="Sets">
                                             <param id="0" name="Unique ID">Function.Param(0)</param>
                                         </condition>
                                     </conditions>
@@ -891,13 +960,13 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-13" name="Set boolean" sid="2956080385611282" type="Piles">
+                                                <action id="-13" name="Set boolean" sid="2956080385611282" type="Sets">
                                                     <param id="0" name="Instance variable">Selected</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="2630993671362543" type="Function">
                                                     <param id="0" name="Name">&quot;PinCardsToPile&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Piles.UID{###}1</param>
+                                                    <param id="1" name="Parameter {n}">Sets.UID{###}1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -906,13 +975,13 @@
                                                 <condition id="-22" name="Else" sid="6211777826947146" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-13" name="Set boolean" sid="904417261823145" type="Piles">
+                                                <action id="-13" name="Set boolean" sid="904417261823145" type="Sets">
                                                     <param id="0" name="Instance variable">Selected</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="9493228379708038" type="Function">
                                                     <param id="0" name="Name">&quot;PinCardsToPile&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Piles.UID{###}0</param>
+                                                    <param id="1" name="Parameter {n}">Sets.UID{###}0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -924,7 +993,7 @@
                                         <condition id="0" name="On function" sid="7037151847955922" type="Function">
                                             <param id="0" name="Name">&quot;TogglePileSelected&quot;</param>
                                         </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="6385168100006336" type="Piles">
+                                        <condition id="-14" name="Pick by unique ID" sid="6385168100006336" type="Sets">
                                             <param id="0" name="Unique ID">Function.Call(&quot;GetPileUIDbyCard&quot;, Function.Param(0))</param>
                                         </condition>
                                     </conditions>
@@ -932,14 +1001,14 @@
                                     <sub-events>
                                         <event-block sid="5275894257816753">
                                             <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="168228138211665" type="Piles">
+                                                <condition id="-8" name="Is boolean instance variable set" sid="168228138211665" type="Sets">
                                                     <param id="0" name="Instance variable">Selected</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Call function" sid="6748592777273353" type="Function">
                                                     <param id="0" name="Name">&quot;SelectPile&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Piles.UID{###}0</param>
+                                                    <param id="1" name="Parameter {n}">Sets.UID{###}0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -950,7 +1019,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="732328355133867" type="Function">
                                                     <param id="0" name="Name">&quot;SelectPile&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Piles.UID{###}1</param>
+                                                    <param id="1" name="Parameter {n}">Sets.UID{###}1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1014,21 +1083,25 @@
                                     <param id="0" name="Name">&quot;CopyPile&quot;</param>
                                     <param id="1" name="Parameter {n}">StandardDeck.UID</param>
                                 </action>
+                                <action id="0" name="Call function" sid="4812556469517715" type="Function">
+                                    <param id="0" name="Name">&quot;SetPilePosition&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}100{###}100</param>
+                                </action>
                                 <action id="0" name="Call function" sid="6659768136590839" type="Function">
                                     <param id="0" name="Name">&quot;CopyPile&quot;</param>
                                     <param id="1" name="Parameter {n}">SmallDeck.UID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="3654701573771351" type="Function">
                                     <param id="0" name="Name">&quot;SetPilePosition&quot;</param>
-                                    <param id="1" name="Parameter {n}">Piles.UID{###}200{###}100</param>
+                                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}250{###}100</param>
                                 </action>
                                 <action disabled="1" id="0" name="Call function" sid="3759276258454125" type="Function">
                                     <param id="0" name="Name">&quot;ReversePile&quot;</param>
-                                    <param id="1" name="Parameter {n}">Piles.UID</param>
+                                    <param id="1" name="Parameter {n}">Sets.UID</param>
                                 </action>
                                 <action disabled="1" id="0" name="Call function" sid="6013238800109494" type="Function">
                                     <param id="0" name="Name">&quot;ShufflePile&quot;</param>
-                                    <param id="1" name="Parameter {n}">Piles.UID</param>
+                                    <param id="1" name="Parameter {n}">Sets.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1056,7 +1129,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5227647350624738">
+                <event-block disabled="1" sid="5227647350624738">
                     <conditions>
                         <condition id="0" name="On click" sid="673724861096667" type="Mouse">
                             <param id="0" name="Mouse button">1</param>
@@ -1097,16 +1170,16 @@
                         <event-block sid="9149224022095413">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="3370918063872986" type="System">
-                                    <param id="0" name="Object">Piles</param>
+                                    <param id="0" name="Object">Sets</param>
                                 </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="7848514404746496" type="Piles">
+                                <condition id="-8" name="Is boolean instance variable set" sid="7848514404746496" type="Sets">
                                     <param id="0" name="Instance variable">Selected</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="6623137050097404" type="Function">
                                     <param id="0" name="Name">&quot;SelectPile&quot;</param>
-                                    <param id="1" name="Parameter {n}">Piles.UID{###}0</param>
+                                    <param id="1" name="Parameter {n}">Sets.UID{###}0</param>
                                 </action>
                             </actions>
                         </event-block>

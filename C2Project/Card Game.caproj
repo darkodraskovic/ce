@@ -30,7 +30,7 @@
         <height>768</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <preview-effects>1</preview-effects>
+    <preview-effects>0</preview-effects>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -135,7 +135,7 @@
                         <type>SmallCard</type>
                         <type>SmallTitle</type>
                         <type>SmallBody</type>
-                        <type>SmallTextPins</type>
+                        <type>MiniTextPins</type>
                     </container>
                     <animation-folder>
                         <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3702139153127765" speed="0">
@@ -159,7 +159,7 @@
                         <type>SmallCard</type>
                         <type>SmallTitle</type>
                         <type>SmallBody</type>
-                        <type>SmallTextPins</type>
+                        <type>MiniTextPins</type>
                     </container>
                 </object-type>
                 <object-type name="SmallBody" sid="253629421349716">
@@ -168,16 +168,16 @@
                         <type>SmallCard</type>
                         <type>SmallTitle</type>
                         <type>SmallBody</type>
-                        <type>SmallTextPins</type>
+                        <type>MiniTextPins</type>
                     </container>
                 </object-type>
-                <object-type global="1" name="SmallTextPins" sid="2636333296179587">
+                <object-type global="1" name="MiniTextPins" sid="2636333296179587">
                     <plugin id="Arr" />
                     <container>
                         <type>SmallCard</type>
                         <type>SmallTitle</type>
                         <type>SmallBody</type>
-                        <type>SmallTextPins</type>
+                        <type>MiniTextPins</type>
                     </container>
                 </object-type>
             </object-folder>
@@ -245,12 +245,12 @@
                 <member>StandardCard</member>
             </members>
             <instance-variables>
-                <instance-variable name="Type" sid="4906132138738571" type="string" />
                 <instance-variable name="DataUID" sid="483164185087395" type="number" />
                 <instance-variable name="DeckUID" sid="7389795864446226" type="number" />
                 <instance-variable name="PileUID" sid="815036681115766" type="number" />
                 <instance-variable name="TextPinsUID" sid="3465910369710021" type="number" />
                 <instance-variable name="FacingUp" sid="522321555947145" type="boolean" />
+                <instance-variable name="Selected" sid="6125190171985302" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DragDrop" sid="8082562073645073">
@@ -261,7 +261,7 @@
                 </behavior-type>
             </behaviors>
         </family>
-        <family name="Piles" plugin-id="Arr" sid="1091432558613702">
+        <family name="Sets" plugin-id="Arr" sid="1091432558613702">
             <members>
                 <member>Pile</member>
                 <member>SmallDeck</member>
@@ -274,7 +274,7 @@
         </family>
         <family name="TextPins" plugin-id="Arr" sid="1900585792951669">
             <members>
-                <member>SmallTextPins</member>
+                <member>MiniTextPins</member>
                 <member>StandardTextPins</member>
             </members>
         </family>
