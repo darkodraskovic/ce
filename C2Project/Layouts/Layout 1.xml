@@ -68,7 +68,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SmallCard" uid="9">
+                <instance type="MiniCard" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -219,28 +219,6 @@
     </layers>
     <nonworld-instances>
         <instance type="StandardData" uid="8" />
-        <instance type="StandardDeck" uid="3">
-            <properties>
-                <width>0</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-            <instance-variables>
-                <Type>Generic</Type>
-                <Selected>false</Selected>
-            </instance-variables>
-        </instance>
-        <instance type="SmallDeck" uid="11">
-            <properties>
-                <width>0</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-            <instance-variables>
-                <Type>Mini</Type>
-                <Selected>false</Selected>
-            </instance-variables>
-        </instance>
         <instance type="Pile" uid="10">
             <properties>
                 <width>0</width>

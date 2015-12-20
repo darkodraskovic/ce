@@ -39,17 +39,17 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="2653659874402705" type="System">
-                                    <param id="0" name="Object to create">SmallCard</param>
+                                    <param id="0" name="Object to create">MiniCard</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">0</param>
                                     <param id="3" name="Y">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="9479989122425805" type="Function">
                                     <param id="0" name="Name">&quot;InitCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">SmallCard.UID{###}Function.Param(0){###}Function.Param(1)</param>
+                                    <param id="1" name="Parameter {n}">MiniCard.UID{###}Function.Param(0){###}Function.Param(1)</param>
                                 </action>
                                 <action id="1" name="Set return value" sid="3663573708576389" type="Function">
-                                    <param id="0" name="Value">SmallCard.UID</param>
+                                    <param id="0" name="Value">MiniCard.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1075,40 +1075,67 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <variable constant="0" name="MiniDeckUID" sid="4691925898362162" static="0" type="number">0</variable>
+                        <variable constant="0" name="StandardDeckUID" sid="9472799741783984" static="0" type="number">0</variable>
+                        <event-block sid="8653215948071413">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="4355876402641903" type="System">
+                                    <param id="0" name="Object to create">Pile</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2171728227778394" type="System">
+                                    <param id="0" name="Variable">StandardDeckUID</param>
+                                    <param id="1" name="Value">Pile.UID</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6417381258943599" type="System">
+                                    <param id="0" name="Object to create">Pile</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4911141148171459" type="System">
+                                    <param id="0" name="Variable">MiniDeckUID</param>
+                                    <param id="1" name="Value">Pile.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="6297596089038933">
                             <conditions />
                             <actions>
                                 <action id="0" name="Call function" sid="8542297047783765" type="Function">
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeckUID</param>
                                 </action>
-                                <action id="0" name="Call function" sid="3251130104361836" type="Function">
+                                <action id="0" name="Call function" sid="9236942284348094" type="Function">
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeckUID</param>
                                 </action>
-                                <action id="0" name="Call function" sid="7419376559032245" type="Function">
+                                <action id="0" name="Call function" sid="1331885168734956" type="Function">
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeckUID</param>
                                 </action>
-                                <action id="0" name="Call function" sid="2628165607466698" type="Function">
+                                <action id="0" name="Call function" sid="3254341307833685" type="Function">
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeckUID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="5752476290287709" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniData.UID{###}SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniData.UID{###}MiniDeckUID</param>
                                 </action>
-                                <action id="0" name="Call function" sid="7394370523772398" type="Function">
+                                <action id="0" name="Call function" sid="2381448017534073" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniData.UID{###}SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniData.UID{###}MiniDeckUID</param>
                                 </action>
-                                <action id="0" name="Call function" sid="949788557144273" type="Function">
+                                <action id="0" name="Call function" sid="7879079790294823" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniData.UID{###}SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniData.UID{###}MiniDeckUID</param>
                                 </action>
-                                <action id="0" name="Call function" sid="7922527019764846" type="Function">
+                                <action id="0" name="Call function" sid="1498376681869387" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniData.UID{###}SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniData.UID{###}MiniDeckUID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1117,7 +1144,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="3464462876209835" type="Function">
                                     <param id="0" name="Name">&quot;CopyPile&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardDeckUID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="4812556469517715" type="Function">
                                     <param id="0" name="Name">&quot;SetPilePosition&quot;</param>
@@ -1125,7 +1152,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="6659768136590839" type="Function">
                                     <param id="0" name="Name">&quot;CopyPile&quot;</param>
-                                    <param id="1" name="Parameter {n}">SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniDeckUID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="3654701573771351" type="Function">
                                     <param id="0" name="Name">&quot;SetPilePosition&quot;</param>
