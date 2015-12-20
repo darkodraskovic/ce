@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>CardLogic</name>
     <events>
         <include>CardData</include>
         <event-group description="" sid="2311737630359872" title="Card">
@@ -21,35 +21,6 @@
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">0</param>
                                     <param id="3" name="Y">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="8128928634482037" type="StandardCard">
-                                    <param id="0" name="Instance variable">TextPinsUID</param>
-                                    <param id="1" name="Value">StandardTextPins.UID</param>
-                                </action>
-                                <action id="1" name="Set size" sid="1033703447718822" type="StandardTextPins">
-                                    <param id="0" name="Width">0</param>
-                                    <param id="1" name="Height">1</param>
-                                    <param id="2" name="Depth">1</param>
-                                </action>
-                                <action id="5" name="Push" sid="5195246444588253" type="StandardTextPins">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">StandardTitle.UID</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                                <action id="5" name="Push" sid="9394566664323294" type="StandardTextPins">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">StandardHeader.UID</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                                <action id="5" name="Push" sid="8624679358311238" type="StandardTextPins">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">StandardBody.UID</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                                <action id="5" name="Push" sid="6874367954447182" type="StandardTextPins">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">StandardFooter.UID</param>
-                                    <param id="2" name="Axis">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="3284807865606709" type="Function">
                                     <param id="0" name="Name">&quot;InitCard&quot;</param>
@@ -73,25 +44,6 @@
                                     <param id="2" name="X">0</param>
                                     <param id="3" name="Y">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="6842503819740964" type="SmallCard">
-                                    <param id="0" name="Instance variable">TextPinsUID</param>
-                                    <param id="1" name="Value">MiniTextPins.UID</param>
-                                </action>
-                                <action id="1" name="Set size" sid="3191667911243134" type="MiniTextPins">
-                                    <param id="0" name="Width">0</param>
-                                    <param id="1" name="Height">1</param>
-                                    <param id="2" name="Depth">1</param>
-                                </action>
-                                <action id="5" name="Push" sid="6833212872206749" type="MiniTextPins">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">SmallTitle.UID</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                                <action id="5" name="Push" sid="6635488964572638" type="MiniTextPins">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">SmallBody.UID</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
                                 <action id="0" name="Call function" sid="9479989122425805" type="Function">
                                     <param id="0" name="Name">&quot;InitCard&quot;</param>
                                     <param id="1" name="Parameter {n}">SmallCard.UID{###}Function.Param(0){###}Function.Param(1)</param>
@@ -110,9 +62,6 @@
                                 <condition id="-14" name="Pick by unique ID" sid="3114398376264744" type="Cards">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="701662526295458" type="Datas">
-                                    <param id="0" name="Unique ID">Function.Param(1)</param>
-                                </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="190954966429558" type="Piles">
                                     <param id="0" name="Unique ID">Function.Param(2)</param>
                                 </condition>
@@ -120,11 +69,11 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="8286404648327547" type="Cards">
                                     <param id="0" name="Instance variable">DataUID</param>
-                                    <param id="1" name="Value">Datas.UID</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="9572778304252139" type="Cards">
                                     <param id="0" name="Instance variable">DeckUID</param>
-                                    <param id="1" name="Value">Piles.UID</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
                                 </action>
                                 <action id="5" name="Push" sid="6876977444173205" type="Piles">
                                     <param id="0" name="Where">0</param>
@@ -151,33 +100,57 @@
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="9657773303299934" type="System">
+                                    <param id="0" name="Object to create">Pins</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9792125851281831" type="Cards">
+                                    <param id="0" name="Instance variable">TextPinsUID</param>
+                                    <param id="1" name="Value">Pins.UID</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9657773303299934" type="System">
+                                    <param id="0" name="Object to create">TextPins</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="4708973730556692">
+                                <comment>Text pins</comment>
+                                <event-block sid="7860362966499474">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="8652787190524473" type="TextPins">
-                                            <param id="0" name="Unique ID">Cards.TextPinsUID</param>
+                                        <condition id="-14" name="Pick by unique ID" sid="1108279500323184" type="Datas">
+                                            <param id="0" name="Unique ID">Cards.DataUID</param>
                                         </condition>
-                                        <condition id="3" name="For each element" sid="7754401051280871" type="TextPins">
-                                            <param id="0" name="Axes">2</param>
-                                        </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="6723658007180505" type="CardTexts">
-                                            <param id="0" name="Unique ID">TextPins.CurValue</param>
-                                        </condition>
+                                        <condition id="1" name="For each key" sid="769973471832809" type="Datas" />
                                     </conditions>
                                     <actions>
-                                        <action id="-4" name="Set position to another object" sid="8508874950950254" type="CardTexts">
+                                        <action id="-3" name="Create object" sid="5059163443965417" type="System">
+                                            <param id="0" name="Object to create">CardTexts</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="2390271292862058" type="Pins">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">CardTexts.UID</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="6788280457457542" type="CardTexts">
                                             <param id="0" name="Object">Cards</param>
-                                            <param id="1" name="Image point (optional)">Self.Text</param>
+                                            <param id="1" name="Image point (optional)">Datas.CurrentKey</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="2642762322434058" type="CardTexts">
-                                            <param id="0" name="Text">Datas.Get(CardTexts.Text) &amp; &quot; &quot; &amp; Cards.UID</param>
+                                        <action id="0" name="Set text" sid="765397560544689" type="CardTexts">
+                                            <param id="0" name="Text">Datas.CurrentValue</param>
                                         </action>
-                                        <action id="-29" name="Move to object" sid="7062319364055701" type="CardTexts">
+                                        <action id="-29" name="Move to object" sid="6830057497719972" type="CardTexts">
                                             <param id="0" name="Where">0</param>
                                             <param id="1" name="Object">Cards</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="9196177541923518" type="CardTexts">
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="3789207920719082" type="CardTexts">
                                             <param id="0" name="Pin to">Cards</param>
                                             <param id="1" name="Mode">0</param>
                                         </action>
@@ -208,14 +181,14 @@
                                 <comment>Text pins</comment>
                                 <event-block sid="8128145651128038">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="1898789281192237" type="TextPins">
+                                        <condition id="-14" name="Pick by unique ID" sid="1898789281192237" type="Pins">
                                             <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                                         </condition>
-                                        <condition id="3" name="For each element" sid="3857803025016065" type="TextPins">
+                                        <condition id="3" name="For each element" sid="3857803025016065" type="Pins">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
                                         <condition id="-14" name="Pick by unique ID" sid="488202631837037" type="CardTexts">
-                                            <param id="0" name="Unique ID">TextPins.CurValue</param>
+                                            <param id="0" name="Unique ID">Pins.CurValue</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -245,14 +218,14 @@
                                 <comment>Text pins</comment>
                                 <event-block sid="9957017392152404">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="2526081623483385" type="TextPins">
+                                        <condition id="-14" name="Pick by unique ID" sid="2526081623483385" type="Pins">
                                             <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                                         </condition>
-                                        <condition id="3" name="For each element" sid="5158939492794774" type="TextPins">
+                                        <condition id="3" name="For each element" sid="5158939492794774" type="Pins">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
                                         <condition id="-14" name="Pick by unique ID" sid="9186419005835684" type="CardTexts">
-                                            <param id="0" name="Unique ID">TextPins.CurValue</param>
+                                            <param id="0" name="Unique ID">Pins.CurValue</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -875,14 +848,14 @@
                                     <sub-events>
                                         <event-block sid="7840193693850982">
                                             <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="671913300060641" type="TextPins">
+                                                <condition id="-14" name="Pick by unique ID" sid="671913300060641" type="Pins">
                                                     <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                                                 </condition>
-                                                <condition id="3" name="For each element" sid="5968263577445608" type="TextPins">
+                                                <condition id="3" name="For each element" sid="5968263577445608" type="Pins">
                                                     <param id="0" name="Axes">2</param>
                                                 </condition>
                                                 <condition id="-14" name="Pick by unique ID" sid="9097996924364319" type="CardTexts">
-                                                    <param id="0" name="Unique ID">TextPins.CurValue</param>
+                                                    <param id="0" name="Unique ID">Pins.CurValue</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -1113,35 +1086,35 @@
                             <actions>
                                 <action id="0" name="Call function" sid="8542297047783765" type="Function">
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeck.UID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="3251130104361836" type="Function">
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeck.UID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="7419376559032245" type="Function">
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeck.UID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="2628165607466698" type="Function">
                                     <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">GenericData.UID{###}StandardDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeck.UID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="5752476290287709" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">GenericData.UID{###}SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniData.UID{###}SmallDeck.UID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="7394370523772398" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">GenericData.UID{###}SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniData.UID{###}SmallDeck.UID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="949788557144273" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">GenericData.UID{###}SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniData.UID{###}SmallDeck.UID</param>
                                 </action>
                                 <action id="0" name="Call function" sid="7922527019764846" type="Function">
                                     <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">GenericData.UID{###}SmallDeck.UID</param>
+                                    <param id="1" name="Parameter {n}">MiniData.UID{###}SmallDeck.UID</param>
                                 </action>
                             </actions>
                         </event-block>

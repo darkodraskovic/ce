@@ -49,138 +49,41 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Card">
-            <object-folder name="Standard">
-                <object-type name="StandardBody" sid="7795414317689359">
-                    <plugin id="Text" />
-                    <container>
-                        <type>StandardCard</type>
-                        <type>StandardBody</type>
-                        <type>StandardFooter</type>
-                        <type>StandardHeader</type>
-                        <type>StandardTitle</type>
-                        <type>StandardTextPins</type>
-                    </container>
-                </object-type>
-                <object-type name="StandardFooter" sid="9174879420668665">
-                    <plugin id="Text" />
-                    <container>
-                        <type>StandardCard</type>
-                        <type>StandardBody</type>
-                        <type>StandardFooter</type>
-                        <type>StandardHeader</type>
-                        <type>StandardTitle</type>
-                        <type>StandardTextPins</type>
-                    </container>
-                </object-type>
-                <object-type name="StandardHeader" sid="7698881331494281">
-                    <plugin id="Text" />
-                    <container>
-                        <type>StandardCard</type>
-                        <type>StandardBody</type>
-                        <type>StandardFooter</type>
-                        <type>StandardHeader</type>
-                        <type>StandardTitle</type>
-                        <type>StandardTextPins</type>
-                    </container>
-                </object-type>
-                <object-type name="StandardTitle" sid="9781371747812887">
-                    <plugin id="Text" />
-                    <container>
-                        <type>StandardCard</type>
-                        <type>StandardBody</type>
-                        <type>StandardFooter</type>
-                        <type>StandardHeader</type>
-                        <type>StandardTitle</type>
-                        <type>StandardTextPins</type>
-                    </container>
-                </object-type>
-                <object-type name="StandardCard" sid="1437872260365753">
-                    <plugin id="Sprite" />
-                    <container>
-                        <type>StandardCard</type>
-                        <type>StandardBody</type>
-                        <type>StandardFooter</type>
-                        <type>StandardHeader</type>
-                        <type>StandardTitle</type>
-                        <type>StandardTextPins</type>
-                    </container>
-                    <animation-folder>
-                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4033350310190619" speed="0">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardFront.png">
-                                <image-point name="Title" x="0.0546875" y="0.0260417" />
-                                <image-point name="Header" x="0.0546875" y="0.140625" />
-                                <image-point name="Body" x="0.0546875" y="0.369792" />
-                                <image-point name="Footer" x="0.0546875" y="0.901042" />
-                            </frame>
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardBack.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type global="1" name="StandardTextPins" sid="4284084032169036">
-                    <plugin id="Arr" />
-                    <container>
-                        <type>StandardCard</type>
-                        <type>StandardBody</type>
-                        <type>StandardFooter</type>
-                        <type>StandardHeader</type>
-                        <type>StandardTitle</type>
-                        <type>StandardTextPins</type>
-                    </container>
-                </object-type>
-            </object-folder>
-            <object-folder name="Small">
-                <object-type name="SmallCard" sid="6013150731801859">
-                    <plugin id="Sprite" />
-                    <container>
-                        <type>SmallCard</type>
-                        <type>SmallTitle</type>
-                        <type>SmallBody</type>
-                        <type>MiniTextPins</type>
-                    </container>
-                    <animation-folder>
-                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3702139153127765" speed="0">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardFront.png">
-                                <image-point name="Title" x="0.076087" y="0.0390625" />
-                                <image-point name="Body" x="0.076087" y="0.210938" />
-                                <collision-poly>
-                                    <point x="1" y="0" />
-                                    <point x="1" y="1" />
-                                    <point x="0" y="1" />
-                                    <point x="0" y="0" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardBack.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="SmallTitle" sid="7790531375083102">
-                    <plugin id="Text" />
-                    <container>
-                        <type>SmallCard</type>
-                        <type>SmallTitle</type>
-                        <type>SmallBody</type>
-                        <type>MiniTextPins</type>
-                    </container>
-                </object-type>
-                <object-type name="SmallBody" sid="253629421349716">
-                    <plugin id="Text" />
-                    <container>
-                        <type>SmallCard</type>
-                        <type>SmallTitle</type>
-                        <type>SmallBody</type>
-                        <type>MiniTextPins</type>
-                    </container>
-                </object-type>
-                <object-type global="1" name="MiniTextPins" sid="2636333296179587">
-                    <plugin id="Arr" />
-                    <container>
-                        <type>SmallCard</type>
-                        <type>SmallTitle</type>
-                        <type>SmallBody</type>
-                        <type>MiniTextPins</type>
-                    </container>
-                </object-type>
-            </object-folder>
+            <object-type name="SmallCard" sid="6013150731801859">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3702139153127765" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardFront.png">
+                            <image-point name="Title" x="0.076087" y="0.0390625" />
+                            <image-point name="Body" x="0.076087" y="0.210938" />
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\MiniCardBack.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="StandardCard" sid="1437872260365753">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4033350310190619" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardFront.png">
+                            <image-point name="Title" x="0.0546875" y="0.0260417" />
+                            <image-point name="Header" x="0.0546875" y="0.140625" />
+                            <image-point name="Body" x="0.0546875" y="0.369792" />
+                            <image-point name="Footer" x="0.0546875" y="0.901042" />
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\darko\Radovi\AppDev\Construct 2\CardGame\Art\Baked\CardBack.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CardText" sid="4970564263685632">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Sys">
             <object-type name="Function" sid="4541220785232194">
@@ -218,20 +121,26 @@
             </object-type>
         </object-folder>
         <object-folder name="Data">
-            <object-type global="1" name="GenericData" sid="7172834122007283">
+            <object-type global="1" name="StandardData" sid="7172834122007283">
                 <plugin id="Dictionary" />
+            </object-type>
+            <object-type global="1" name="MiniData" sid="1320368235489865">
+                <plugin id="Dictionary" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Pins">
+            <object-type global="1" name="TextPins" sid="141183351634171">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="ImagePins" sid="893378594826026">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
     </object-folder>
     <families>
         <family name="CardTexts" plugin-id="Text" sid="752120663348031">
             <members>
-                <member>SmallBody</member>
-                <member>SmallTitle</member>
-                <member>StandardBody</member>
-                <member>StandardFooter</member>
-                <member>StandardHeader</member>
-                <member>StandardTitle</member>
+                <member>CardText</member>
             </members>
             <behaviors>
                 <behavior-type name="Pin" sid="750574511715453">
@@ -272,15 +181,16 @@
                 <instance-variable name="Selected" sid="4859458805314714" type="boolean" />
             </instance-variables>
         </family>
-        <family name="TextPins" plugin-id="Arr" sid="1900585792951669">
+        <family name="Pins" plugin-id="Arr" sid="1900585792951669">
             <members>
-                <member>MiniTextPins</member>
-                <member>StandardTextPins</member>
+                <member>ImagePins</member>
+                <member>TextPins</member>
             </members>
         </family>
         <family name="Datas" plugin-id="Dictionary" sid="6701541753228706">
             <members>
-                <member>GenericData</member>
+                <member>MiniData</member>
+                <member>StandardData</member>
             </members>
         </family>
     </families>
@@ -288,7 +198,7 @@
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>CardLogic.xml</event-sheet>
         <event-sheet>CardData.xml</event-sheet>
     </event-folder>
     <global-instances>

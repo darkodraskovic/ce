@@ -12,25 +12,42 @@
                 <event-block sid="1427272751982864">
                     <conditions />
                     <actions>
-                        <action id="0" name="Add key" sid="2357507436677342" type="GenericData">
+                        <action disabled="1" id="0" name="Add key" sid="2357507436677342" type="StandardData">
                             <param id="0" name="Key">&quot;Type&quot;</param>
                             <param id="1" name="Value">&quot;Generic&quot;</param>
                         </action>
-                        <action id="0" name="Add key" sid="5257589385707388" type="GenericData">
+                        <action id="0" name="Add key" sid="5257589385707388" type="StandardData">
                             <param id="0" name="Key">&quot;Title&quot;</param>
                             <param id="1" name="Value">&quot;Title&quot;</param>
                         </action>
-                        <action id="0" name="Add key" sid="2938798028807756" type="GenericData">
+                        <action id="0" name="Add key" sid="2938798028807756" type="StandardData">
                             <param id="0" name="Key">&quot;Header&quot;</param>
                             <param id="1" name="Value">&quot;Header&quot;</param>
                         </action>
-                        <action id="0" name="Add key" sid="5375022628540093" type="GenericData">
+                        <action id="0" name="Add key" sid="5375022628540093" type="StandardData">
                             <param id="0" name="Key">&quot;Body&quot;</param>
                             <param id="1" name="Value">&quot;Body Stone&quot;</param>
                         </action>
-                        <action id="0" name="Add key" sid="3014384811939811" type="GenericData">
+                        <action id="0" name="Add key" sid="3014384811939811" type="StandardData">
                             <param id="0" name="Key">&quot;Footer&quot;</param>
                             <param id="1" name="Value">&quot;Footer&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7394394563183487">
+                    <conditions />
+                    <actions>
+                        <action disabled="1" id="0" name="Add key" sid="541238949735495" type="MiniData">
+                            <param id="0" name="Key">&quot;Type&quot;</param>
+                            <param id="1" name="Value">&quot;Generic&quot;</param>
+                        </action>
+                        <action id="0" name="Add key" sid="9002386885867828" type="MiniData">
+                            <param id="0" name="Key">&quot;Title&quot;</param>
+                            <param id="1" name="Value">&quot;Title&quot;</param>
+                        </action>
+                        <action id="0" name="Add key" sid="8967040501238994" type="MiniData">
+                            <param id="0" name="Key">&quot;Body&quot;</param>
+                            <param id="1" name="Value">&quot;Body Stone&quot;</param>
                         </action>
                     </actions>
                 </event-block>
