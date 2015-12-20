@@ -8,56 +8,82 @@
             <sub-events>
                 <event-group description="" sid="2295715369380363" title="Card Creation">
                     <sub-events>
-                        <comment>Args: #0 DataUID ; #1 DeckUID</comment>
-                        <event-block sid="6547079106023959">
+                        <comment>Args: #0 CardType, #1 DataUID, #2 DeckUID</comment>
+                        <event-block sid="2921599068946148">
                             <conditions>
-                                <condition id="0" name="On function" sid="8289802090809636" type="Function">
-                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
+                                <condition id="0" name="On function" sid="5230343725430127" type="Function">
+                                    <param id="0" name="Name">&quot;Card&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="6898532038631168" type="System">
-                                    <param id="0" name="Object to create">StandardCard</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">0</param>
-                                    <param id="3" name="Y">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="3284807865606709" type="Function">
-                                    <param id="0" name="Name">&quot;InitCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardCard.UID{###}Function.Param(0){###}Function.Param(1)</param>
-                                </action>
-                                <action id="1" name="Set return value" sid="5667775179786114" type="Function">
-                                    <param id="0" name="Value">StandardCard.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6479286447275851">
-                            <conditions>
-                                <condition id="0" name="On function" sid="8562193657823729" type="Function">
-                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="2653659874402705" type="System">
-                                    <param id="0" name="Object to create">MiniCard</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">0</param>
-                                    <param id="3" name="Y">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9479989122425805" type="Function">
-                                    <param id="0" name="Name">&quot;InitCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniCard.UID{###}Function.Param(0){###}Function.Param(1)</param>
-                                </action>
-                                <action id="1" name="Set return value" sid="3663573708576389" type="Function">
-                                    <param id="0" name="Value">MiniCard.UID</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="CardUID" sid="7607631833749306" static="0" type="number">0</variable>
+                                <event-block sid="6624140212236614">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4401936495108787" type="System">
+                                            <param id="0" name="First value">Function.Param(0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;standard&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="5998917631879189" type="System">
+                                            <param id="0" name="Object to create">StandardCard</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1749346736071109" type="System">
+                                            <param id="0" name="Variable">CardUID</param>
+                                            <param id="1" name="Value">StandardCard.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9074023000505329">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9933778424088248" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="1071827231576461" type="System">
+                                            <param id="0" name="First value">Function.Param(0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;mini&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="8960408420617251" type="System">
+                                            <param id="0" name="Object to create">MiniCard</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5557430842319763" type="System">
+                                            <param id="0" name="Variable">CardUID</param>
+                                            <param id="1" name="Value">MiniCard.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3248624501452398">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6678101122821254" type="Function">
+                                            <param id="0" name="Name">&quot;InitCardObj&quot;</param>
+                                            <param id="1" name="Parameter {n}">CardUID{###}Function.Param(1){###}Function.Param(2)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="210725509819464" type="Function">
+                                            <param id="0" name="Name">&quot;InitCardPins&quot;</param>
+                                            <param id="1" name="Parameter {n}">CardUID</param>
+                                        </action>
+                                        <action id="1" name="Set return value" sid="1377190052878569" type="Function">
+                                            <param id="0" name="Value">CardUID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Args: #0 CardUID, #1 DataUID, #2 DeckUID</comment>
                         <event-block sid="3897869426523495">
                             <conditions>
                                 <condition id="0" name="On function" sid="8496886038318163" type="Function">
-                                    <param id="0" name="Name">&quot;InitCard&quot;</param>
+                                    <param id="0" name="Name">&quot;InitCardObj&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="3114398376264744" type="Cards">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
@@ -83,10 +109,6 @@
                                 <action id="-13" name="Set boolean" sid="950518895885697" type="Cards">
                                     <param id="0" name="Instance variable">FacingUp</param>
                                     <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="3740813761795944" type="Function">
-                                    <param id="0" name="Name">&quot;InitCardPins&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1133,40 +1155,22 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6297596089038933">
-                            <conditions />
+                        <event-block sid="3048184905561436">
+                            <conditions>
+                                <condition id="-10" name="For" sid="6995326862517993" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">3</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="8542297047783765" type="Function">
-                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeckUID</param>
+                                <action id="0" name="Call function" sid="1602311698289525" type="Function">
+                                    <param id="0" name="Name">&quot;Card&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;standard&quot;{###}StandardData.UID{###}StandardDeckUID</param>
                                 </action>
-                                <action id="0" name="Call function" sid="9236942284348094" type="Function">
-                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeckUID</param>
-                                </action>
-                                <action id="0" name="Call function" sid="1331885168734956" type="Function">
-                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeckUID</param>
-                                </action>
-                                <action id="0" name="Call function" sid="3254341307833685" type="Function">
-                                    <param id="0" name="Name">&quot;StandardCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">StandardData.UID{###}StandardDeckUID</param>
-                                </action>
-                                <action id="0" name="Call function" sid="5752476290287709" type="Function">
-                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniData.UID{###}MiniDeckUID</param>
-                                </action>
-                                <action id="0" name="Call function" sid="2381448017534073" type="Function">
-                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniData.UID{###}MiniDeckUID</param>
-                                </action>
-                                <action id="0" name="Call function" sid="7879079790294823" type="Function">
-                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniData.UID{###}MiniDeckUID</param>
-                                </action>
-                                <action id="0" name="Call function" sid="1498376681869387" type="Function">
-                                    <param id="0" name="Name">&quot;MiniCard&quot;</param>
-                                    <param id="1" name="Parameter {n}">MiniData.UID{###}MiniDeckUID</param>
+                                <action id="0" name="Call function" sid="6789555230150467" type="Function">
+                                    <param id="0" name="Name">&quot;Card&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;mini&quot;{###}MiniData.UID{###}MiniDeckUID</param>
                                 </action>
                             </actions>
                         </event-block>
