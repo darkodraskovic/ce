@@ -193,7 +193,7 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
-        <object-folder name="Deck">
+        <object-folder name="Pile">
             <object-type global="1" name="StandardDeck" sid="1155166700531714">
                 <plugin id="Arr" />
             </object-type>
@@ -261,7 +261,7 @@
                 </behavior-type>
             </behaviors>
         </family>
-        <family name="Sets" plugin-id="Arr" sid="1091432558613702">
+        <family name="Piles" plugin-id="Arr" sid="1091432558613702">
             <members>
                 <member>Pile</member>
                 <member>SmallDeck</member>
