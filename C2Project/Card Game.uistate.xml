@@ -21,15 +21,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="CardTexts" />
+        <family expanded="1" name="CardTexts" />
         <family expanded="1" name="Cards" />
-        <family expanded="1" name="Piles" />
         <family expanded="1" name="CardDatas" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Card/" />
-        <folder expanded="0" path="object-folder/Sys/" />
+        <folder expanded="1" path="object-folder/Sys/" />
         <folder expanded="1" path="object-folder/Pile/" />
         <folder expanded="1" path="object-folder/Data/" />
         <folder expanded="1" path="layout-folder/" />

@@ -98,6 +98,9 @@
             <object-type name="Debug" sid="8366483956389033">
                 <plugin id="Text" />
             </object-type>
+            <object-type global="1" name="HelperArray" sid="3066474880434401">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
         <object-folder name="Pile">
             <object-type global="1" name="Pile" sid="5376891541430363">
@@ -158,15 +161,6 @@
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
-        </family>
-        <family name="Piles" plugin-id="Arr" sid="1091432558613702">
-            <members>
-                <member>Pile</member>
-            </members>
-            <instance-variables>
-                <instance-variable name="Type" sid="118632860871426" type="string" />
-                <instance-variable name="Selected" sid="4859458805314714" type="boolean" />
-            </instance-variables>
         </family>
         <family name="CardDatas" plugin-id="Dictionary" sid="6701541753228706">
             <members>

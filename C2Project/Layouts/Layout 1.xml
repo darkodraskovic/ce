@@ -225,13 +225,16 @@
                 <height>1</height>
                 <depth>1</depth>
             </properties>
-            <instance-variables>
-                <Type>Generic</Type>
-                <Selected>false</Selected>
-            </instance-variables>
         </instance>
         <instance type="MiniData" uid="20" />
         <instance type="CardPins" uid="4">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="HelperArray" uid="3">
             <properties>
                 <width>10</width>
                 <height>1</height>
