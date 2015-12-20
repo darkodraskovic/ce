@@ -84,6 +84,9 @@
             <object-type name="CardText" sid="4970564263685632">
                 <plugin id="Text" />
             </object-type>
+            <object-type global="1" name="CardPins" sid="216302373431204">
+                <plugin id="Arr" />
+            </object-type>
         </object-folder>
         <object-folder name="Sys">
             <object-type name="Function" sid="4541220785232194">
@@ -126,14 +129,6 @@
             </object-type>
             <object-type global="1" name="MiniData" sid="1320368235489865">
                 <plugin id="Dictionary" />
-            </object-type>
-        </object-folder>
-        <object-folder name="Pins">
-            <object-type global="1" name="TextPins" sid="141183351634171">
-                <plugin id="Arr" />
-            </object-type>
-            <object-type global="1" name="ImagePins" sid="893378594826026">
-                <plugin id="Arr" />
             </object-type>
         </object-folder>
     </object-folder>
@@ -181,13 +176,7 @@
                 <instance-variable name="Selected" sid="4859458805314714" type="boolean" />
             </instance-variables>
         </family>
-        <family name="Pins" plugin-id="Arr" sid="1900585792951669">
-            <members>
-                <member>ImagePins</member>
-                <member>TextPins</member>
-            </members>
-        </family>
-        <family name="Datas" plugin-id="Dictionary" sid="6701541753228706">
+        <family name="CardDatas" plugin-id="Dictionary" sid="6701541753228706">
             <members>
                 <member>MiniData</member>
                 <member>StandardData</member>

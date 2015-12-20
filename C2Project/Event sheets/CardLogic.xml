@@ -102,30 +102,24 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="9657773303299934" type="System">
-                                    <param id="0" name="Object to create">Pins</param>
+                                    <param id="0" name="Object to create">CardPins</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">0</param>
                                     <param id="3" name="Y">0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="9792125851281831" type="Cards">
                                     <param id="0" name="Instance variable">TextPinsUID</param>
-                                    <param id="1" name="Value">Pins.UID</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="9657773303299934" type="System">
-                                    <param id="0" name="Object to create">TextPins</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">0</param>
-                                    <param id="3" name="Y">0</param>
+                                    <param id="1" name="Value">CardPins.UID</param>
                                 </action>
                             </actions>
                             <sub-events>
                                 <comment>Text pins</comment>
                                 <event-block sid="7860362966499474">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="1108279500323184" type="Datas">
+                                        <condition id="-14" name="Pick by unique ID" sid="1108279500323184" type="CardDatas">
                                             <param id="0" name="Unique ID">Cards.DataUID</param>
                                         </condition>
-                                        <condition id="1" name="For each key" sid="769973471832809" type="Datas" />
+                                        <condition id="1" name="For each key" sid="769973471832809" type="CardDatas" />
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="5059163443965417" type="System">
@@ -134,17 +128,17 @@
                                             <param id="2" name="X">0</param>
                                             <param id="3" name="Y">0</param>
                                         </action>
-                                        <action id="5" name="Push" sid="2390271292862058" type="Pins">
+                                        <action id="5" name="Push" sid="2390271292862058" type="CardPins">
                                             <param id="0" name="Where">0</param>
                                             <param id="1" name="Value">CardTexts.UID</param>
                                             <param id="2" name="Axis">0</param>
                                         </action>
                                         <action id="-4" name="Set position to another object" sid="6788280457457542" type="CardTexts">
                                             <param id="0" name="Object">Cards</param>
-                                            <param id="1" name="Image point (optional)">Datas.CurrentKey</param>
+                                            <param id="1" name="Image point (optional)">CardDatas.CurrentKey</param>
                                         </action>
                                         <action id="0" name="Set text" sid="765397560544689" type="CardTexts">
-                                            <param id="0" name="Text">Datas.CurrentValue</param>
+                                            <param id="0" name="Text">CardDatas.CurrentValue</param>
                                         </action>
                                         <action id="-29" name="Move to object" sid="6830057497719972" type="CardTexts">
                                             <param id="0" name="Where">0</param>
@@ -181,14 +175,14 @@
                                 <comment>Text pins</comment>
                                 <event-block sid="8128145651128038">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="1898789281192237" type="Pins">
+                                        <condition id="-14" name="Pick by unique ID" sid="1898789281192237" type="CardPins">
                                             <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                                         </condition>
-                                        <condition id="3" name="For each element" sid="3857803025016065" type="Pins">
+                                        <condition id="3" name="For each element" sid="3857803025016065" type="CardPins">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
                                         <condition id="-14" name="Pick by unique ID" sid="488202631837037" type="CardTexts">
-                                            <param id="0" name="Unique ID">Pins.CurValue</param>
+                                            <param id="0" name="Unique ID">CardPins.CurValue</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -218,14 +212,14 @@
                                 <comment>Text pins</comment>
                                 <event-block sid="9957017392152404">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="2526081623483385" type="Pins">
+                                        <condition id="-14" name="Pick by unique ID" sid="2526081623483385" type="CardPins">
                                             <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                                         </condition>
-                                        <condition id="3" name="For each element" sid="5158939492794774" type="Pins">
+                                        <condition id="3" name="For each element" sid="5158939492794774" type="CardPins">
                                             <param id="0" name="Axes">2</param>
                                         </condition>
                                         <condition id="-14" name="Pick by unique ID" sid="9186419005835684" type="CardTexts">
-                                            <param id="0" name="Unique ID">Pins.CurValue</param>
+                                            <param id="0" name="Unique ID">CardPins.CurValue</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -333,13 +327,13 @@
                             <sub-events>
                                 <event-block sid="9747437232588225">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="781844362585781" type="Datas">
+                                        <condition id="-14" name="Pick by unique ID" sid="781844362585781" type="CardDatas">
                                             <param id="0" name="Unique ID">Cards.DataUID</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="1362227525635458" type="Function">
-                                            <param id="0" name="Value">Datas.Get(Function.Param(1))</param>
+                                            <param id="0" name="Value">CardDatas.Get(Function.Param(1))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -848,14 +842,14 @@
                                     <sub-events>
                                         <event-block sid="7840193693850982">
                                             <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="671913300060641" type="Pins">
+                                                <condition id="-14" name="Pick by unique ID" sid="671913300060641" type="CardPins">
                                                     <param id="0" name="Unique ID">Cards.TextPinsUID</param>
                                                 </condition>
-                                                <condition id="3" name="For each element" sid="5968263577445608" type="Pins">
+                                                <condition id="3" name="For each element" sid="5968263577445608" type="CardPins">
                                                     <param id="0" name="Axes">2</param>
                                                 </condition>
                                                 <condition id="-14" name="Pick by unique ID" sid="9097996924364319" type="CardTexts">
-                                                    <param id="0" name="Unique ID">Pins.CurValue</param>
+                                                    <param id="0" name="Unique ID">CardPins.CurValue</param>
                                                 </condition>
                                             </conditions>
                                             <actions>

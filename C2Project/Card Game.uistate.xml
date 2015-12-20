@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">Layout 1</layout>
-        <event-sheet order="2">CardData</event-sheet>
-        <event-sheet active="1" order="3">CardLogic</event-sheet>
+        <event-sheet active="1" order="2">CardData</event-sheet>
+        <event-sheet order="3">CardLogic</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,9 +23,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="CardTexts" />
         <family expanded="1" name="Cards" />
-        <family expanded="0" name="Piles" />
-        <family expanded="0" name="Pins" />
-        <family expanded="0" name="Datas" />
+        <family expanded="1" name="Piles" />
+        <family expanded="1" name="CardDatas" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -33,7 +32,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Sys/" />
         <folder expanded="1" path="object-folder/Pile/" />
         <folder expanded="1" path="object-folder/Data/" />
-        <folder expanded="1" path="object-folder/Pins/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />

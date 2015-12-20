@@ -252,15 +252,8 @@
                 <Selected>false</Selected>
             </instance-variables>
         </instance>
-        <instance type="TextPins" uid="19">
-            <properties>
-                <width>10</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
         <instance type="MiniData" uid="20" />
-        <instance type="ImagePins" uid="21">
+        <instance type="CardPins" uid="4">
             <properties>
                 <width>10</width>
                 <height>1</height>
